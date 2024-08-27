@@ -4,3 +4,4 @@ node_modules
 dist
 # Temporary files
 .cache
+.idea

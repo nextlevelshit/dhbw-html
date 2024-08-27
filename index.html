@@ -1,54 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-	<title></title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Michael W. Czechowski</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						'nls-green': '#79C28D',
+						'nls-blue': '#5A99C3',
+						'nls-violet': '#7E86CA',
+						'nls-purple': '#C18FBD',
+						'nls-pink': '#EC7A9A',
+						'nls-black': '#0f0f11',
+					},
+				},
+			},
+		}
+	</script>
+	<style>
+		@media (max-height: 568px) {
+			html, body {
+				font-size: 2.78vh;
+			}
+		}
+
+		svg {
+			max-width: 80vw;
+			fill: white;
+		}
+
+		img {
+			mix-blend-mode: color-burn;
+		}
+
+		.teaser {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.teaser::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: linear-gradient(to top, var(--gradient-color) 0%, rgba(0, 0, 0, 0) 50%);
+			pointer-events: none;
+		}
+
+		.bg-nls-green .teaser { --gradient-color: #79C28D; }
+		.bg-nls-blue .teaser { --gradient-color: #5A99C3; }
+		.bg-nls-violet .teaser { --gradient-color: #7E86CA; }
+		.bg-nls-purple .teaser { --gradient-color: #C18FBD; }
+		.bg-nls-pink .teaser { --gradient-color: #EC7A9A; }
+		.bg-nls-black .teaser { --gradient-color: #0f0f11; }
+
+		@media (min-width: 640px) {
+			.paragraph-spacing {
+				padding-right: 20vw;
+			}
+
+			.paragraph-spacing.center {
+				padding-right: 10vw;
+				padding-left: 10vw;
+			}
+		}
+
+		section {
+			top: 0;
+			position: sticky;
+			position: -webkit-sticky;
+			position: -moz-sticky;
+			position: -ms-sticky;
+			position: -o-sticky;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			height: 90vh;
+			overflow: hidden;
+		}
+
+		@media (min-width: 640px) {
+			section {
+				height: 80vh;
+			}
+		}
+
+		article > header,
+		article > footer {
+			position: sticky;
+			position: -webkit-sticky;
+			position: -moz-sticky;
+			position: -ms-sticky;
+			position: -o-sticky;
+		}
+
+		article > header {
+			bottom: 100vh;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		article > footer {
+			top: 0;
+		}
+
+		article > footer section {
+			min-height: 200vh;
+			padding-top: 6rem;
+		}
+
+		article > footer section p {
+			margin: 1rem 3rem 6rem;
+		}
+	</style>
 </head>
-<body>
-<script src="./src/index.ts"></script>
-<main>
+<body class="font-mono text-[1.68vh] m-0 p-0">
+<main class="flex flex-col">
 	<article>
-		<header class="--black">
-			<div class="teaser">
-				<div class="--center">
-					<object data="./src/assets/nls.svg" type="image/svg+xml"></object>
+		<header class="bg-nls-black text-white">
+			<div class="teaser p-8 sm:p-20 flex flex-col items-center justify-center h-full">
+				<div class="w-4/5 max-w-3xl mb-8">
+					<object data="./src/assets/nls.svg" type="image/svg+xml" class="w-full"></object>
 				</div>
-
-
-				<div class="--paragraph --center">
-					<h1>Michael W. Czechowski</h1>
-
-					<div class="--secondary">
-						<p>
-							Charles and Ray Eames are counted among the most important figures of twentieth-century
-							design. Their work spans the fields of furniture design, filmmaking, photography and
-							exhibition design. Vitra is the sole authorised manufacturer of Eames products for Europe
-							and the Middle East. When you own an Eames product made by Vitra, you know it is an
-							original.
-						</p>
-						<p>
-							<a href="https://www.vitra.com/" target="_blank">
-								Full collection on vitra.com
-							</a>
-						</p>
-					</div>
+				<div class="text-center max-w-3xl center py-4">
+					<h1 class="text-xl sm:text-6xl mb-4 opacity-60">hello·at·dailysh.it</h1>
 				</div>
 			</div>
 		</header>
 
-		<section class="--green">
-			<div class="teaser">
-				<div class="columns">
-					<div class="columns__item">
+		<section class="bg-nls-green">
+			<div class="teaser p-8 sm:p-20 flex flex-col h-full">
+				<div class="flex flex-col sm:flex-row items-center sm:items-start">
+					<div class="w-full sm:w-1/2 mb-8 sm:mb-0">
 						<img src="https://www.vitra.com/de-de/_storage/asset/2397344/storage/v_thumb_250x/33223561.jpg"
-							 alt="Picture of Lounge Chair & Ottoman">
+							 alt="Picture of Lounge Chair & Ottoman" class="w-full h-auto">
 					</div>
-					<div class="columns__item">
-						<h2>Software Developer</h2>
-						<h3 class="--secondary">PONS Langenscheidt GmbH</h3>
-						<p>
+					<div class="w-full sm:w-1/2 sm:pl-8">
+						<h2 class="text-2xl mb-2">Software Developer</h2>
+						<h3 class="text-xl mb-4 opacity-60">PONS Langenscheidt GmbH</h3>
+						<p class="paragraph-spacing">
 							The Lounge Chair, created by Charles and Ray Eames in the 1950s, was designed with the aim
 							of combining an elegant appearance with ultimate comfort. It has been produced by Vitra
 							using virtually the same methods ever since, and is now recognised as a great classic of
@@ -61,44 +157,41 @@
 			</div>
 		</section>
 
-		<section class="--blue">
-			<div class="teaser">
-				<div class="columns">
-					<div class="columns__item">
+		<section class="bg-nls-blue">
+			<div class="teaser p-8 sm:p-20 flex flex-col h-full">
+				<div class="flex flex-col sm:flex-row items-center sm:items-start">
+					<div class="w-full sm:w-1/2 mb-8 sm:mb-0">
 						<img src="//www.vitra.com/de-de/_storage/asset/2397735/storage/v_thumb_250x/33148466.jpg"
-							 alt="Picture of Lounge Chair Plywood Group LCW">
+							 alt="Picture of Lounge Chair Plywood Group LCW" class="w-full h-auto">
 					</div>
-					<div class="columns__item">
-						<h2>University Lecturer</h2>
-						<h3 class="--secondary">Duale Hochschule Badenwürttemberg, Stuttgart</h3>
-						<ul>
+					<div class="w-full sm:w-1/2 sm:pl-8">
+						<h2 class="text-2xl mb-2">University Lecturer</h2>
+						<h3 class="text-xl mb-4 opacity-60">Duale Hochschule Badenwürttemberg, Stuttgart</h3>
+						<ul class="list-disc list-inside mb-4">
 							<li>2022 – 2021 · Social Engineering</li>
 							<li>2022 – 2021 · Social Engineering</li>
 						</ul>
-						<h3 class="--secondary">Leibniz-Fachhochschule, Hannover</h3>
-						<ul>
+						<h3 class="text-xl mb-4 opacity-60">Leibniz-Fachhochschule, Hannover</h3>
+						<ul class="list-disc list-inside">
 							<li>2022 – 2021 · Social Engineering</li>
 							<li>2022 – 2021 · Social Engineering</li>
 						</ul>
-						<p>
-
-						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="--violet">
-			<div class="teaser">
-				<div class="columns">
-					<div class="columns__item">
+		<section class="bg-nls-violet">
+			<div class="teaser p-8 sm:p-20 flex flex-col h-full">
+				<div class="flex flex-col sm:flex-row items-center sm:items-start">
+					<div class="w-full sm:w-1/2 mb-8 sm:mb-0">
 						<img src="//www.vitra.com/en-ie/_storage/asset/2397703/storage/v_thumb_250x/33148452.jpg"
-							 alt="Picture of Plywood Group LCM">
+							 alt="Picture of Plywood Group LCM" class="w-full h-auto">
 					</div>
-					<div class="columns__item">
-						<h2>Plywood Group LCM</h2>
-						<h3 class="--secondary">Charles & Ray Eames, 1945/1946</h3>
-						<p>
+					<div class="w-full sm:w-1/2 sm:pl-8">
+						<h2 class="text-2xl mb-2">Plywood Group LCM</h2>
+						<h3 class="text-xl mb-4 opacity-60">Charles & Ray Eames, 1945/1946</h3>
+						<p class="paragraph-spacing">
 							Due to the slender organic shapes of its seat and back shells, the LCM (Lounge Chair Metal)
 							by Charles and Ray Eames quickly acquired the nickname 'potato chip chair'.
 						</p>
@@ -107,17 +200,17 @@
 			</div>
 		</section>
 
-		<section class="--purple">
-			<div class="teaser">
-				<div class="columns">
-					<div class="columns__item">
+		<section class="bg-nls-purple">
+			<div class="teaser p-8 sm:p-20 flex flex-col h-full">
+				<div class="flex flex-col sm:flex-row items-center sm:items-start">
+					<div class="w-full sm:w-1/2 mb-8 sm:mb-0">
 						<img src="//www.vitra.com/en-ie/_storage/asset/1765634/storage/v_thumb_250x/22408057.jpg"
-							 alt="Picture of Eames Plastic Armchair DAW">
+							 alt="Picture of Eames Plastic Armchair DAW" class="w-full h-auto">
 					</div>
-					<div class="columns__item">
-						<h2>Eames Plastic Armchair DAW</h2>
-						<h3 class="--secondary">Charles & Ray Eames, 1950</h3>
-						<p>
+					<div class="w-full sm:w-1/2 sm:pl-8">
+						<h2 class="text-2xl mb-2">Eames Plastic Armchair DAW</h2>
+						<h3 class="text-xl mb-4 opacity-60">Charles & Ray Eames, 1950</h3>
+						<p class="paragraph-spacing">
 							Today the Plastic Chairs by Charles and Ray Eames seem like archetypes of the genre of
 							chairs whose shell can be combined with diverse bases. The combination of the wooden base
 							with the plastic shell of the DAW (Dining Height Armchair Wood Base) produces a rich
@@ -129,17 +222,17 @@
 			</div>
 		</section>
 
-		<section class="--green">
-			<div class="teaser">
-				<div class="columns">
-					<div class="columns__item">
+		<section class="bg-nls-green">
+			<div class="teaser p-8 sm:p-20 flex flex-col h-full">
+				<div class="flex flex-col sm:flex-row items-center sm:items-start">
+					<div class="w-full sm:w-1/2 mb-8 sm:mb-0">
 						<img src="//www.vitra.com/en-ie/_storage/asset/1608035/storage/v_thumb_250x/19458579.jpg"
-							 alt="Picture of Eames Plastic Armchair DAW">
+							 alt="Picture of Eames Plastic Armchair DAW" class="w-full h-auto">
 					</div>
-					<div class="columns__item">
-						<h2>Lobby Chair ES 108</h2>
-						<h3 class="--secondary">Charles & Ray Eames, 1960</h3>
-						<p>
+					<div class="w-full sm:w-1/2 sm:pl-8">
+						<h2 class="text-2xl mb-2">Lobby Chair ES 108</h2>
+						<h3 class="text-xl mb-4 opacity-60">Charles & Ray Eames, 1960</h3>
+						<p class="paragraph-spacing">
 							Charles and Ray Eames originally designed the Lobby Chairs to furnish lobby areas in New
 							York City's Time & Life Building. Like all models of the Lobby Chair, the conference chair
 							ES 108 has luxuriant leather-covered cushions that offer excellent comfort. The upholstery
@@ -150,17 +243,17 @@
 			</div>
 		</section>
 
-		<section class="--blue">
-			<div class="teaser">
-				<div class="columns">
-					<div class="columns__item">
+		<section class="bg-nls-blue">
+			<div class="teaser p-8 sm:p-20 flex flex-col h-full">
+				<div class="flex flex-col sm:flex-row items-center sm:items-start">
+					<div class="w-full sm:w-1/2 mb-8 sm:mb-0">
 						<img src="//www.vitra.com/en-ie/_storage/asset/2271518/storage/v_thumb_250x/31196004.jpg"
-							 alt="Picture of Eames Fiberglass Side Chair DSW">
+							 alt="Picture of Eames Fiberglass Side Chair DSW" class="w-full h-auto">
 					</div>
-					<div class="columns__item">
-						<h2>Eames Fiberglass Side Chair DSW</h2>
-						<h3 class="--secondary">Charles & Ray Eames, 1950</h3>
-						<p>
+					<div class="w-full sm:w-1/2 sm:pl-8">
+						<h2 class="text-2xl mb-2">Eames Fiberglass Side Chair DSW</h2>
+						<h3 class="text-xl mb-4 opacity-60">Charles & Ray Eames, 1950</h3>
+						<p class="paragraph-spacing">
 							For the Dining Height Side Chair Wood Base (DSW), Charles and Ray Eames combined the
 							organically shaped seat shell with a four-legged wooden base. The pairing of plastic and
 							wood gives the classic design a certain warmth and casual appeal. The seat shells can be
@@ -172,17 +265,17 @@
 			</div>
 		</section>
 
-		<section class="--violet">
-			<div class="teaser">
-				<div class="columns">
-					<div class="columns__item">
+		<section class="bg-nls-violet">
+			<div class="teaser p-8 sm:p-20 flex flex-col h-full">
+				<div class="flex flex-col sm:flex-row items-center sm:items-start">
+					<div class="w-full sm:w-1/2 mb-8 sm:mb-0">
 						<img src="//www.vitra.com/en-ie/_storage/asset/1374562/storage/v_thumb_250x/33148698.jpg"
-							 alt="Picture of Aluminium Chairs EA 115/116">
+							 alt="Picture of Aluminium Chairs EA 115/116" class="w-full h-auto">
 					</div>
-					<div class="columns__item">
-						<h2>Aluminium Chairs EA 115/116</h2>
-						<h3 class="--secondary">Charles & Ray Eames, 1958</h3>
-						<p>
+					<div class="w-full sm:w-1/2 sm:pl-8">
+						<h2 class="text-2xl mb-2">Aluminium Chairs EA 115/116</h2>
+						<h3 class="text-xl mb-4 opacity-60">Charles & Ray Eames, 1958</h3>
+						<p class="paragraph-spacing">
 							The <strong>Aluminium</strong> Chairs EA 115 and EA 116 offer superb comfort with their high
 							backrest. The seating height is designed so that users can easily rise from the chair. Both
 							versions are available with <strong>fabric</strong>, <strong>leather</strong> or <strong>mesh
@@ -194,17 +287,17 @@
 			</div>
 		</section>
 
-		<section class="--purple">
-			<div class="teaser">
-				<div class="columns">
-					<div class="columns__item">
+		<section class="bg-nls-purple">
+			<div class="teaser p-8 sm:p-20 flex flex-col h-full">
+				<div class="flex flex-col sm:flex-row items-center sm:items-start">
+					<div class="w-full sm:w-1/2 mb-8 sm:mb-0">
 						<img src="//www.vitra.com/en-ie/_storage/asset/2555777/storage/v_thumb_250x/38178076.jpg"
-							 alt="Picture of Soft Pad Chairs EA 217/219">
+							 alt="Picture of Soft Pad Chairs EA 217/219" class="w-full h-auto">
 					</div>
-					<div class="columns__item">
-						<h2>Soft Pad Chairs EA 217/219</h2>
-						<h3 class="--secondary">Charles & Ray Eames, 1969</h3>
-						<p>
+					<div class="w-full sm:w-1/2 sm:pl-8">
+						<h2 class="text-2xl mb-2">Soft Pad Chairs EA 217/219</h2>
+						<h3 class="text-xl mb-4 opacity-60">Charles & Ray Eames, 1969</h3>
+						<p class="paragraph-spacing">
 							The <strong>office chairs</strong> EA 217 and EA 219 by Charles and Ray Eames are a perfect
 							choice for the well-appointed home office. The tilt mechanism, which can be adjusted to the
 							user's weight, is paired with soft cushions to provide excellent comfort. The higher
@@ -215,52 +308,33 @@
 			</div>
 		</section>
 
-		<footer class="--black">
-			<section class="--paragraph --center">
-				<h2>Idea</h2>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, quisquam. Explicabo id
-					consequuntur dolores asperiores, nulla est neque aliquid illo itaque soluta libero culpa
-					necessitatibus ad dolorem corrupti voluptates eos.
-				</p>
+		<footer class="sticky top-0 bg-nls-black text-white">
+			<section class="p-8 sm:p-20 min-h-[120vh]">
+				<div class="max-w-3xl mx-auto">
+					<h2 class="text-2xl mb-4">Idea</h2>
+					<p class="mb-8 paragraph-spacing">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, quisquam. Explicabo id
+						consequuntur dolores asperiores, nulla est neque aliquid illo itaque soluta libero culpa
+						necessitatibus ad dolorem corrupti voluptates eos.
+					</p>
 
-				<h2>Author</h2>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, quisquam. Explicabo id
-					consequuntur dolores asperiores, nulla est neque aliquid illo itaque soluta libero culpa
-					necessitatibus ad dolorem corrupti voluptates eos.
-				</p>
+					<h2 class="text-2xl mb-4">Author</h2>
+					<p class="mb-8 paragraph-spacing">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, quisquam. Explicabo id
+						consequuntur dolores asperiores, nulla est neque aliquid illo itaque soluta libero culpa
+						necessitatibus ad dolorem corrupti voluptates eos.
+					</p>
 
-				<h2>Disclaimer</h2>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, quisquam. Explicabo id
-					consequuntur dolores asperiores, nulla est neque aliquid illo itaque soluta libero culpa
-					necessitatibus ad dolorem corrupti voluptates eos.
-				</p>
-
-
-				<!--
-							<p>
-							  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, quisquam. Explicabo id consequuntur dolores asperiores, nulla est neque aliquid illo itaque soluta libero culpa necessitatibus ad dolorem corrupti voluptates eos.
-							</p>
-
-							<p>
-							  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, quisquam. Explicabo id consequuntur dolores asperiores, nulla est neque aliquid illo itaque soluta libero culpa necessitatibus ad dolorem corrupti voluptates eos.
-							</p>
-
-							<p>
-							  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, quisquam. Explicabo id consequuntur dolores asperiores, nulla est neque aliquid illo itaque soluta libero culpa necessitatibus ad dolorem corrupti voluptates eos.
-							</p>
-
-							<p>
-							  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, quisquam. Explicabo id consequuntur dolores asperiores, nulla est neque aliquid illo itaque soluta libero culpa necessitatibus ad dolorem corrupti voluptates eos.
-							</p>
-
-							<p>
-							  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, quisquam. Explicabo id consequuntur dolores asperiores, nulla est neque aliquid illo itaque soluta libero culpa necessitatibus ad dolorem corrupti voluptates eos.
-							</p> -->
+					<h2 class="text-2xl mb-4">Disclaimer</h2>
+					<p class="mb-8 paragraph-spacing">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, quisquam. Explicabo id
+						consequuntur dolores asperiores, nulla est neque aliquid illo itaque soluta libero culpa
+						necessitatibus ad dolorem corrupti voluptates eos.
+					</p>
+				</div>
 			</section>
 		</footer>
+
 	</article>
 </main>
 </body>

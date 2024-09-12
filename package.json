@@ -1,18 +1,37 @@
 {
-  "name": "nls-parcel-dailyshit",
-  "version": "1.0.0-0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
-  },
-  "author": "Michael Werner Czechowski <mail@dailysh.it>",
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "parcel-bundler": "^1.10.3",
-    "sass": "^1.16.0",
-    "typescript": "^3.2.1"
-  }
+	"name": "nls-parcel-dailyshit",
+	"version": "1.0.0-0",
+	"description": "",
+	"main": "index.html",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "parcel index.html --open",
+		"build": "parcel build index.html",
+		"format": "npx prettier --write src/**/*.ts index.html package.json",
+		"scp": "scp -r ./dist/* tengo@tuttle.uberspace.de:/home/tengo/html",
+		"deploy": "rm -rf ./dist && npm run build && npm run scp"
+	},
+	"author": "Michael Werner Czechowski <mail@dailysh.it>",
+	"license": "Apache-2.0",
+	"devDependencies": {
+		"parcel-bundler": "^1.10.3",
+		"sass": "^1.16.0",
+		"typescript": "^3.2.1"
+	},
+	"prettier": {
+		"singleQuote": false,
+		"tabWidth": 4,
+		"semi": true,
+		"arrowParens": "always",
+		"useTabs": true,
+		"jsxSingleQuote": false,
+		"bracketSpacing": false,
+		"printWidth": 160,
+		"trailingComma": "all",
+		"bracketSameLine": false,
+		"htmlWhitespaceSensitivity": "strict",
+		"proseWrap": "never",
+		"singleAttributePerLine": false,
+		"editorconfig": true
+	}
 }

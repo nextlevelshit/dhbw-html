@@ -1,4 +1,3 @@
-import events from './events';
-import './styles/index.scss';
+import events from "./events";
 
 events();

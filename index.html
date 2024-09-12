@@ -80,6 +80,10 @@
 		<!-- endregion -->
 		<!-- region Custom CSS -->
 		<style>
+			html {
+				background: black;
+				color: black;
+			}
 			section {
 				top: 0;
 				position: sticky;
@@ -168,14 +172,14 @@
 							<!-- region Courses -->
 							<div class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
 								<div>
-									<details open class="mb-4">
-										<summary class="text-md font-semibold mb-2 cursor-pointer"> Duale Hochschule Baden-Württemberg (DHBW) </summary>
+									<details class="mb-4">
+										<summary class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline text-white transition underline-offset-2 mb-2 cursor-pointer"> Duale Hochschule Baden-Württemberg (DHBW) </summary>
 										<ul class="list-disc list-inside">
 											<li>2024 „Einführung in die Webentwicklung“ (Introduction to Web Development)</li>
 										</ul>
 									</details>
-									<details open class="mb-4">
-										<summary class="text-md font-semibold mb-2 cursor-pointer"> Leibniz Fachhochschule (LFH) </summary>
+									<details class="mb-4">
+										<summary class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline text-white transition underline-offset-2 mb-2 cursor-pointer"> Leibniz Fachhochschule (LFH) </summary>
 										<ul class="list-disc list-inside">
 											<li>2023 „Social Engineering“</li>
 											<li>2023 „Mobile Medien (Mobile Media)“</li>
@@ -199,19 +203,19 @@
 								<!-- region Frontend -->
 								<div>
 									<details open class="mb-4">
-										<summary class="text-md font-semibold mb-2 cursor-pointer text-nls-green"> Frontend Technologies </summary>
+										<summary class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black focus:no-underline transition underline-offset-2 mb-2 cursor-pointer text-md font-semibold mb-2 cursor-pointer text-nls-green"> Frontend Technologies </summary>
 										<ul class="list-disc list-inside text-gray-400">
 											<li>
 												<a
 													href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A high-level, interpreted programming language"
 													aria-label="A high-level, interpreted programming language"
 													>JavaScript (ES6+)</a
 												>,
 												<a
 													href="https://www.typescriptlang.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A typed superset of JavaScript that compiles to plain JavaScript"
 													aria-label="A typed superset of JavaScript that compiles to plain JavaScript"
 													>TypeScript</a
@@ -220,21 +224,21 @@
 											<li>
 												<a
 													href="https://reactjs.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A JavaScript library for building user interfaces"
 													aria-label="A JavaScript library for building user interfaces"
 													>React</a
 												>,
 												<a
 													href="https://vuejs.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A progressive framework for building user interfaces"
 													aria-label="A progressive framework for building user interfaces"
 													>Vue.js</a
 												>,
 												<a
 													href="https://svelte.dev/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A radical new approach to building user interfaces"
 													aria-label="A radical new approach to building user interfaces"
 													>Svelte</a
@@ -243,14 +247,14 @@
 											<li>
 												<a
 													href="https://angular.io/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A platform for building mobile and desktop web applications"
 													aria-label="A platform for building mobile and desktop web applications"
 													>Angular</a
 												>,
 												<a
 													href="https://emberjs.com/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A framework for ambitious web developers"
 													aria-label="A framework for ambitious web developers"
 													>Ember.js</a
@@ -259,7 +263,7 @@
 											<li>
 												<a
 													href="https://jquery.com/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A fast, small, and feature-rich JavaScript library"
 													aria-label="A fast, small, and feature-rich JavaScript library"
 													>jQuery</a
@@ -268,28 +272,28 @@
 											<li>
 												<a
 													href="https://developer.mozilla.org/en-US/docs/Web/HTML"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="The standard markup language for documents designed to be displayed in a web browser"
 													aria-label="The standard markup language for documents designed to be displayed in a web browser"
 													>HTML5</a
 												>,
 												<a
 													href="https://developer.mozilla.org/en-US/docs/Web/CSS"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A stylesheet language used to describe the presentation of a document written in HTML or XML"
 													aria-label="A stylesheet language used to describe the presentation of a document written in HTML or XML"
 													>CSS3</a
 												>,
 												<a
 													href="https://sass-lang.com/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A preprocessor scripting language that is interpreted or compiled into CSS"
 													aria-label="A preprocessor scripting language that is interpreted or compiled into CSS"
 													>Sass</a
 												>,
 												<a
 													href="https://lesscss.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A backwards-compatible language extension for CSS"
 													aria-label="A backwards-compatible language extension for CSS"
 													>Less</a
@@ -299,28 +303,28 @@
 											<li>
 												<a
 													href="https://tailwindcss.com/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A utility-first CSS framework for rapidly building custom designs"
 													aria-label="A utility-first CSS framework for rapidly building custom designs"
 													>Tailwindcss</a
 												>,
 												<a
 													href="https://ant.design/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A design system for enterprise-level products"
 													aria-label="A design system for enterprise-level products"
 													>Ant Design</a
 												>,
 												<a
 													href="https://material.io/design"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A design system created by Google"
 													aria-label="A design system created by Google"
 													>Material Design</a
 												>,
 												<a
 													href="https://getbootstrap.com/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="The world's most popular front-end open source toolkit"
 													aria-label="The world's most popular front-end open source toolkit"
 													>Bootstrap</a
@@ -330,21 +334,21 @@
 												Bundlers:
 												<a
 													href="https://vitejs.dev/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="Next Generation Frontend Tooling"
 													aria-label="Next Generation Frontend Tooling"
 													>Vite</a
 												>,
 												<a
 													href="https://webpack.js.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A static module bundler for modern JavaScript applications"
 													aria-label="A static module bundler for modern JavaScript applications"
 													>Webpack</a
 												>,
 												<a
 													href="https://parceljs.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="Blazing fast, zero configuration web application bundler"
 													aria-label="Blazing fast, zero configuration web application bundler"
 													>Parcel</a
@@ -353,29 +357,29 @@
 											<li>
 												Visualization:
 												<a
-													href="https://plotly.com/javascript/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
-													title="A high-level, declarative charting library"
-													aria-label="A high-level, declarative charting library"
-													>Plot.js</a
+													href="https://observablehq.com/plot/"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													title="A javaScript library for exploratory data visualization"
+													aria-label="A javaScript library for exploratory data visualization"
+													>Observable Plot</a
 												>,
 												<a
 													href="https://d3js.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A JavaScript library for manipulating documents based on data"
 													aria-label="A JavaScript library for manipulating documents based on data"
 													>D3.js</a
 												>,
 												<a
 													href="https://particles.js.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A lightweight JavaScript library for creating particles"
 													aria-label="A lightweight JavaScript library for creating particles"
 													>Particle.js</a
 												>,
 												<a
 													href="https://threejs.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A cross-browser JavaScript library and API used to create and display animated 3D computer graphics"
 													aria-label="A cross-browser JavaScript library and API used to create and display animated 3D computer graphics"
 													>Three.js</a
@@ -384,7 +388,7 @@
 											<li>
 												<a
 													href="https://nextjs.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="The React Framework for Production"
 													aria-label="The React Framework for Production"
 													>NextJS</a
@@ -394,7 +398,7 @@
 											<li>
 												<a
 													href="https://nuxtjs.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="The Intuitive Vue Framework"
 													aria-label="The Intuitive Vue Framework"
 													>NuxtJS</a
@@ -404,7 +408,7 @@
 											<li>
 												<a
 													href="https://kit.svelte.dev/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="The fastest way to build Svelte apps"
 													aria-label="The fastest way to build Svelte apps"
 													>SvelteKit</a
@@ -414,7 +418,7 @@
 											<li>
 												<a
 													href="https://www.gatsbyjs.com/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A React-based open source framework for creating websites and apps"
 													aria-label="A React-based open source framework for creating websites and apps"
 													>Gatsby</a
@@ -424,7 +428,7 @@
 											<li>
 												<a
 													href="https://storybook.js.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A tool for building UI components and pages in isolation"
 													aria-label="A tool for building UI components and pages in isolation"
 													>Storybook</a
@@ -434,7 +438,7 @@
 											<li>
 												<a
 													href="https://jestjs.io/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A delightful JavaScript Testing Framework with a focus on simplicity"
 													aria-label="A delightful JavaScript Testing Framework with a focus on simplicity"
 													>Jest</a
@@ -444,7 +448,7 @@
 											<li>
 												<a
 													href="https://www.cypress.io/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="Fast, easy and reliable testing for anything that runs in a browser"
 													aria-label="Fast, easy and reliable testing for anything that runs in a browser"
 													>Cypress</a
@@ -454,7 +458,7 @@
 											<li>
 												<a
 													href="https://playwright.dev/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="Reliable end-to-end testing for modern web apps"
 													aria-label="Reliable end-to-end testing for modern web apps"
 													>Playwright</a
@@ -464,7 +468,7 @@
 											<li>
 												<a
 													href="https://redux.js.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A Predictable State Container for JS Apps"
 													aria-label="A Predictable State Container for JS Apps"
 													>Redux</a
@@ -474,7 +478,7 @@
 											<li>
 												<a
 													href="https://mobx.js.org/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="Simple, scalable state management"
 													aria-label="Simple, scalable state management"
 													>MobX</a
@@ -484,7 +488,7 @@
 											<li>
 												<a
 													href="https://zustand-demo.pmnd.rs/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A small, fast and scalable bearbones state-management solution"
 													aria-label="A small, fast and scalable bearbones state-management solution"
 													>Zustand</a
@@ -494,7 +498,7 @@
 											<li>
 												<a
 													href="https://www.apollographql.com/docs/react/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A complete state management library for JavaScript apps"
 													aria-label="A complete state management library for JavaScript apps"
 													>Apollo Client</a
@@ -504,7 +508,7 @@
 											<li>
 												<a
 													href="https://axios-http.com/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="Promise based HTTP client for the browser and node.js"
 													aria-label="Promise based HTTP client for the browser and node.js"
 													>Axios</a
@@ -514,7 +518,7 @@
 											<li>
 												<a
 													href="https://lodash.com/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A modern JavaScript utility library delivering modularity, performance & extras"
 													aria-label="A modern JavaScript utility library delivering modularity, performance & extras"
 													>Lodash</a
@@ -524,7 +528,7 @@
 											<li>
 												<a
 													href="https://rxjs.dev/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A library for reactive programming using Observables"
 													aria-label="A library for reactive programming using Observables"
 													>RxJS</a
@@ -534,7 +538,7 @@
 											<li>
 												<a
 													href="https://www.khronos.org/webgl/"
-													class="hover:text-white text-nls-green hover:decoration-2 transition underline-offset-2 underline"
+													class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline text-nls-green hover:decoration-2 transition underline-offset-2 underline"
 													title="A JavaScript API for rendering interactive 2D and 3D graphics"
 													aria-label="A JavaScript API for rendering interactive 2D and 3D graphics"
 													>WebGL</a
@@ -547,8 +551,8 @@
 								<!-- endregion -->
 								<!-- region DevOps -->
 								<div>
-									<details open class="mb-4">
-										<summary class="text-md font-semibold mb-2 cursor-pointer text-nls-blue"> DevOps & Cloud</summary>
+									<details class="mb-4">
+										<summary class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-blue focus:bg-nls-blue focus:text-black focus:no-underline transition underline-offset-2 mb-2 cursor-pointer text-md font-semibold mb-2 cursor-pointer text-nls-blue"> DevOps & Cloud</summary>
 										<ul class="list-disc list-inside text-gray-400">
 											<li>
 												<a
@@ -731,8 +735,8 @@
 								<!-- endregion -->
 								<!-- region Backend -->
 								<div>
-									<details open class="mb-4">
-										<summary class="text-md font-semibold mb-2 cursor-pointer text-nls-violet"> Backend Technologies </summary>
+									<details class="mb-4">
+										<summary class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-violet focus:bg-nls-violet focus:text-black focus:no-underline transition underline-offset-2 mb-2 cursor-pointer text-md font-semibold mb-2 cursor-pointer text-nls-violet"> Backend Technologies </summary>
 										<ul class="list-disc list-inside text-gray-400">
 											<li>
 												<a
@@ -940,8 +944,8 @@
 								<!-- endregion -->
 								<!-- region Data -->
 								<div>
-									<details open class="mb-4">
-										<summary class="text-md font-semibold mb-2 cursor-pointer text-nls-purple"> Database & Data</summary>
+									<details class="mb-4">
+										<summary class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-purple focus:bg-nls-purple focus:text-black focus:no-underline transition underline-offset-2 mb-2 cursor-pointer text-md font-semibold mb-2 cursor-pointer text-nls-purple"> Database & Data</summary>
 										<ul class="list-disc list-inside text-gray-400">
 											<li>
 												SQL (<a
@@ -998,8 +1002,8 @@
 								<!-- endregion -->
 								<!-- region Cross-Platform -->
 								<div>
-									<details open class="mb-4">
-										<summary class="text-md font-semibold mb-2 cursor-pointer text-nls-pink"> Cross-Platform Development </summary>
+									<details class="mb-4">
+										<summary class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-pink focus:bg-nls-pink focus:text-black focus:no-underline transition underline-offset-2 mb-2 cursor-pointer text-md font-semibold mb-2 cursor-pointer text-nls-pink"> Cross-Platform Development </summary>
 										<ul class="list-disc list-inside text-gray-400">
 											<li>
 												Desktop Apps:
@@ -1057,8 +1061,8 @@
 								<!-- endregion -->
 								<!-- region Best Practices -->
 								<div>
-									<details open class="mb-4">
-										<summary class="text-md font-semibold mb-2 cursor-pointer text-nls-red"> Development Best Practices </summary>
+									<details class="mb-4">
+										<summary class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-red focus:bg-nls-red focus:text-black focus:no-underline transition underline-offset-2 mb-2 cursor-pointer text-md font-semibold mb-2 cursor-pointer text-nls-red"> Development Best Practices </summary>
 										<ul class="list-disc list-inside text-gray-400">
 											<li>
 												<a
@@ -1117,8 +1121,8 @@
 								<!-- endregion -->
 								<!-- region Tracking -->
 								<div>
-									<details open class="mb-4">
-										<summary class="text-md font-semibold mb-2 cursor-pointer text-nls-orange"> Analytics & Tracking </summary>
+									<details class="mb-4">
+										<summary class="focus:outline-none rounded-sm focus:z-10 focus:ring-4 focus:ring-nls-orange focus:bg-nls-orange focus:text-black focus:no-underline transition underline-offset-2 mb-2 cursor-pointer text-md font-semibold mb-2 cursor-pointer text-nls-orange"> Analytics & Tracking </summary>
 										<ul class="list-disc list-inside text-gray-400">
 											<li>
 												<a

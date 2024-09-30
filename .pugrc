@@ -1,0 +1,157 @@
+{
+	"locals": {
+		"head": {
+			"lang": "en",
+			"charset": "UTF-8",
+			"viewport": "width=device-width, initial-scale=1.0",
+			"title": "NEXT LEVEL SHIT · Michael W. Czechowski - Digital Transformation & Computer Science in Stuttgart",
+			"description": "Michael W. Czechowski: Digital Transformation & Computer Science with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
+			"author": "Michael W. Czechowski",
+			"keywords": "software architect, academic, web development, university lecturer, Stuttgart, open source, software solutions, 20 years experience, Michael Czechowski",
+			"robots": "index, follow",
+			"revisitAfter": "7 days",
+			"language": "English",
+			"distribution": "global",
+			"rating": "general",
+			"ogType": "website",
+			"ogUrl": "https://dailysh.it/",
+			"ogTitle": "Michael W. Czechowski - Digital Transformation & Computer Science",
+			"ogDescription": "Digital Transformation & Computer Science with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
+			"ogImage": "./src/assets/og-image.png",
+			"twitterCard": "summary_large_image",
+			"twitterUrl": "https://dailysh.it/",
+			"twitterTitle": "Michael W. Czechowski - Digital Transformation & Computer Science",
+			"twitterDescription": "Digital Transformation & Computer Science with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
+			"twitterImage": "./src/assets/twitter-image.png",
+			"umamiSrc": "https://umami.dailysh.it/umami.js",
+			"umamiId": "f91846ac-70d3-48d4-8639-c2be8a5e5f8b"
+		},
+		"footer": {
+			"title": "Let's Connect",
+			"content": "I'm always eager to take on new challenges and collaborate on innovative projects. Whether you're looking to modernize your tech stack, scale your infrastructure, or develop cutting-edge applications, I bring the expertise and passion to drive your project to success. Let's discuss how we can work together to achieve your technology goals.",
+			"githubUrl": "https://github.com/nextlevelshit",
+			"linkedinUrl": "https://www.linkedin.com/in/michael-werner-czechowski/",
+			"xingUrl": "https://www.xing.com/profile/Michael_Czechowski",
+			"emailLink": "mailto:hello@dailysh.it?subject=Hi",
+			"emailText": "Electronic Mail",
+			"riskUrl": "https://nextlevelshit.github.io/xstate-vue/",
+			"riskImgSrc": "./src/assets/nxlsht.png",
+			"riskImgAlt": "",
+			"riskAriaLabel": "Risk",
+			"riskTitle": "At your own risk"
+		},
+		"title": {
+			"email": [
+				"hello",
+				"at",
+				"dailysh.it"
+			],
+			"name": "Michael W. Czechowski",
+			"logoSvg": "./src/assets/nls.svg",
+			"jobTitle": [
+				"Digital Transformation",
+				"Computer Science"
+			]
+		},
+		"professional": {
+			"title": "Professional Approach",
+			"description": "Good software stands on strong pillars and needs a solid foundation. I have a deep understanding of the principles and practices that make software reliable, scalable, and maintainable. My approach is based on the following key concepts:",
+			"keyConcepts": [
+				{
+					"link": {
+						"href": "https://12factor.net/",
+						"title": "The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc).",
+						"ariaLabel": "The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc).",
+						"text": "The 12-Factor App"
+					},
+					"text": " Microservices and Software-as-a-Service Methodology"
+				},
+				{
+					"text": "Testing Pyramid"
+				},
+				{
+					"text": "Accessibility (a11y)"
+				},
+				{
+					"text": "Rapid Prototyping and Design Thinking"
+				},
+				{
+					"text": "Scalability and Reliability"
+				},
+				{
+					"text": "Continuous Integration and Continuous Deployment (CI/CD)"
+				},
+				{
+					"text": "DevOps and Site Reliability Engineering (SRE)"
+				},
+				{
+					"text": "Agile and Lean Development"
+				}
+			],
+			"principlesIntro": "In my work I follow different principles and people and ideas:",
+			"principlesPeople": [
+				{
+					"name": "Robert C. Martin",
+					"concept": "Clean Code"
+				},
+				{
+					"name": "Eric Evans",
+					"concept": "Domain-Driven Design"
+				},
+				{
+					"name": "Uncle Bob",
+					"concept": "SOLID Principles"
+				},
+				{
+					"name": "Linus Torvalds",
+					"concept": "Open Source"
+				},
+				{
+					"name": "Aaron Swartz",
+					"concept": "Open Access"
+				},
+				{
+					"name": "Ilya Zhitomirskiy",
+					"concept": "Decentralization"
+				},
+				{
+					"name": "Aral Balkan",
+					"concept": "Ethical Design"
+				},
+				{
+					"name": "and many more",
+					"concept": "..."
+				}
+			]
+		},
+		"academia": {
+			"intro": [
+				"Since 2021 at Leibniz Fachhochschule (LFH) in Hannover, Germany. I am a passionate advocate for open source software and have",
+				"been a university lecturer for over a decade, teaching web development, software engineering, and computer science. Also at DHBW Stuttgart, I am a lecturer for the course \"Web Development\" in the field of computer science."
+			],
+			"sectionTitles": {
+				"computerScience": "Computer Science",
+				"expertise": "Expertise"
+			},
+			"courseInstitutions": {
+				"dhbw": "Duale Hochschule Baden-Württemberg (DHBW)",
+				"lfh": "Leibniz Fachhochschule (LFH)"
+			},
+			"courses": {
+				"dhbw": [
+					"2024 „Einführung in die Webentwicklung“ (Introduction to Web Development)"
+				],
+				"lfh": [
+					"2023 „Social Engineering“",
+					"2023 „Mobile Medien (Mobile Media)“",
+					"2022 „Social Engineering“",
+					"2022 „Mobile Medien (Mobile Media)“",
+					"2021 „Social Engineering“"
+				]
+			},
+			"expertise": {
+				"intro": "With over two decades of experience in software development and architecture, I've navigated the evolving landscape of technology, consistently delivering cutting-edge solutions across various domains."
+			}
+		}
+	}
+}

@@ -2,19 +2,22 @@
 	"name": "nls-parcel-dailyshit",
 	"version": "1.0.0-0",
 	"description": "",
-	"main": "index.html",
+	"main": "index.pug",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "parcel --public-url=/public index.html --open",
-		"build": "parcel build index.html",
-		"format": "npx prettier --write src/**/*.ts index.html package.json",
+		"start": "parcel --public-url / index.pug --open",
+		"build": "parcel build index.pug",
+		"format": "npx prettier --write src/**/*.{ts,pug} index.pug package.json",
 		"scp": "scp -r ./dist/* tengo@tuttle.uberspace.de:/home/tengo/html",
 		"deploy": "rm -rf ./dist && npm run build && npm run scp"
 	},
 	"author": "Michael Werner Czechowski <mail@dailysh.it>",
 	"license": "Apache-2.0",
 	"devDependencies": {
+		"@prettier/plugin-pug": "^3.1.0",
 		"parcel-bundler": "^1.10.3",
+		"prettier": "^3.3.3",
+		"pug": "^3.0.3",
 		"sass": "^1.16.0",
 		"typescript": "^3.2.1"
 	},
@@ -32,6 +35,8 @@
 		"htmlWhitespaceSensitivity": "strict",
 		"proseWrap": "never",
 		"singleAttributePerLine": false,
-		"editorconfig": true
+		"plugins": [
+			"@prettier/plugin-pug"
+		]
 	}
 }

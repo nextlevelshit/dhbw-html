@@ -1,0 +1,16 @@
+header.bg-nls-black.text-white
+	.teaser.p-8.flex.flex-col.items-center.justify-center.h-full(class="sm:p-20 min-h-[90vh]")
+		.max-w-3xl.mb-8(class="w-4/5")
+			object.w-full(data=title.logoSvg, type="image/svg+xml")
+		.text-center.max-w-3xl.center.py-8
+			h1.text-xl.mb-4.opacity-90(class="sm:text-5xl", itemprop="email")
+				| #{title.email[0]}
+				span.opacity-20 &ndash;
+				| #{title.email[1]}
+				span.opacity-20 &ndash;
+				| #{title.email[2]}
+			p.text-lg.opacity-80(class="sm:text-2xl", itemprop="name") #{title.name}
+			p.text-md.opacity-60(class="sm:text-xl", itemprop="jobTitle")
+				| #{title.jobTitle[0]}
+				wbr
+				| &amp; #{title.jobTitle[0]}

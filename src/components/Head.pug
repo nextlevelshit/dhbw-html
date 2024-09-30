@@ -1,0 +1,89 @@
+head
+	// region SEO
+	meta(charset=head.charset)
+	meta(name="viewport", content=head.viewport)
+	title= head.title
+	meta(name="description", content=head.description)
+	meta(name="author", content=head.author)
+	meta(name="keywords", content=head.keywords)
+	meta(name="robots", content=head.robots)
+	meta(name="revisit-after", content=head.revisitAfter)
+	meta(name="language", content=head.language)
+	meta(name="distribution", content=head.distribution)
+	meta(name="rating", content=head.rating)
+	// endregion
+
+	// region Open Graph / Facebook
+	meta(property="og:type", content=head.ogType)
+	meta(property="og:url", content=head.ogUrl)
+	meta(property="og:title", content=head.ogTitle)
+	meta(property="og:description", content=head.ogDescription)
+	meta(property="og:image", content=head.ogImage)
+	// endregion
+
+	// region Twitter
+	meta(property="twitter:card", content=head.twitterCard)
+	meta(property="twitter:url", content=head.twitterUrl)
+	meta(property="twitter:title", content=head.twitterTitle)
+	meta(property="twitter:description", content=head.twitterDescription)
+	meta(property="twitter:image", content=head.twitterImage)
+	// endregion
+
+	// region Schema.org for Google
+	script(type="application/ld+json").
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Michael W. Czechowski",
+			"jobTitle": "Digital Transformation & Computer Science",
+			"url": "https://dailysh.it",
+			"sameAs": ["https://github.com/nextlevelshit", "https://www.linkedin.com/in/michael-werner-czechowski/", "https://www.xing.com/profile/Michael_Czechowski"]
+		}
+	// endregion
+
+	// region tailwindcss
+	script(src="https://cdn.tailwindcss.com")
+	script.
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						"nls-green": "#79C28D",
+						"nls-blue": "#5A99C3",
+						"nls-violet": "#7E86CA",
+						"nls-purple": "#C18FBD",
+						"nls-pink": "#EC7A9A",
+						"nls-red": "#E76F51",
+						"nls-orange": "#F9A03F",
+						"nls-yellow": "#F9C74F",
+						"nls-black": "#0f0f11",
+					},
+				},
+			},
+		};
+	// endregion
+
+	// region Custom CSS
+	style.
+		html {
+			background: black;
+			color: black;
+		}
+		section {
+			top: 0;
+			/*position: sticky;*/
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+		}
+		footer {
+			top: 0;
+			position: sticky;
+		}
+		object {
+			max-height: 60vh;
+			max-width: 80vw;
+		}
+	// endregion
+
+	script(async, defer, data-website-id=head.umamiId, src=head.umamiSrc)

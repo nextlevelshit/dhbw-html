@@ -1,0 +1,22 @@
+section.bg-nls-black.text-white
+	.p-8(class="sm:p-20 min-h-[120vh]")
+		.max-w-screen-md.mx-auto
+			h2.text-2xl.mb-4 #{professional.title}
+			p.mb-8.max-w-prose
+				| #{professional.description}
+			ul.list-disc.list-inside.mb-8
+				each item, i in professional.keyConcepts
+					li
+						if item.link
+							a.rounded-sm.transition.underline-offset-2.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer.text-white.underline(
+								href=item.link.href,
+								class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline",
+								title=item.link.title,
+								aria-label=item.link.ariaLabel
+							) #{item.link.text}
+						| #{item.text}
+				p.mb-8.max-w-prose
+					| #{professional.principlesIntro}
+			ul.list-disc.list-inside.mb-8
+				each person, i in professional.principlesPeople
+					li #{person.name} &ndash; #{person.concept}

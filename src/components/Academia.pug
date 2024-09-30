@@ -1,0 +1,834 @@
+section.bg-nls-black.text-white
+	.p-8(class="sm:p-20 min-h-[120vh]")
+		.max-w-screen-md.mx-auto
+			// region Computer Science
+			h2.text-2xl.mb-4= academia.sectionTitles.computerScience
+			p.mb-8.max-w-prose
+				| #{academia.intro[0]}
+				| #{academia.intro[1]}
+			// endregion
+
+			// region Courses
+			.grid.grid-cols-1.gap-6.mb-8(class="md:grid-cols-1")
+				div
+					details.mb-4
+						summary.rounded-sm.text-white.transition.underline-offset-2.mb-2.cursor-pointer(
+							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline"
+						)= academia.courseInstitutions.dhbw
+						ul.list-disc.list-inside
+							li= academia.courses.dhbw[0]
+				div
+					details.mb-4
+						summary.rounded-sm.text-white.transition.underline-offset-2.mb-2.cursor-pointer(
+							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline"
+						)= academia.courseInstitutions.lfh
+						ul.list-disc.list-inside
+							each course in academia.courses.lfh
+								li= course
+			// endregion
+
+			// region Skills and Expertise
+			h2.text-2xl.mb-4= academia.sectionTitles.expertise
+			p.mb-8.max-w-prose
+				| #{academia.expertise.intro}
+			// endregion
+
+			.grid.grid-cols-1.gap-6.mb-8(class="md:grid-cols-1")
+				// region Frontend
+				div
+					details.mb-4(open="")
+						summary.rounded-sm.transition.underline-offset-2.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer.text-nls-green(
+							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black focus:no-underline"
+						) Frontend Technologies
+						ul.list-disc.list-inside.text-gray-400
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A high-level, interpreted programming language",
+									aria-label="A high-level, interpreted programming language"
+								) JavaScript (ES6+),
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://www.typescriptlang.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A typed superset of JavaScript that compiles to plain JavaScript",
+									aria-label="A typed superset of JavaScript that compiles to plain JavaScript"
+								) TypeScript
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://reactjs.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A JavaScript library for building user interfaces",
+									aria-label="A JavaScript library for building user interfaces"
+								) React,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://vuejs.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A progressive framework for building user interfaces",
+									aria-label="A progressive framework for building user interfaces"
+								) Vue.js,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://svelte.dev/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A radical new approach to building user interfaces",
+									aria-label="A radical new approach to building user interfaces"
+								) Svelte
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://angular.io/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A platform for building mobile and desktop web applications",
+									aria-label="A platform for building mobile and desktop web applications"
+								) Angular,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://emberjs.com/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A framework for ambitious web developers",
+									aria-label="A framework for ambitious web developers"
+								) Ember.js
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://jquery.com/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A fast, small, and feature-rich JavaScript library",
+									aria-label="A fast, small, and feature-rich JavaScript library"
+								) jQuery, Plain JS
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://developer.mozilla.org/en-US/docs/Web/HTML",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="The standard markup language for documents designed to be displayed in a web browser",
+									aria-label="The standard markup language for documents designed to be displayed in a web browser"
+								) HTML5,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://developer.mozilla.org/en-US/docs/Web/CSS",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A stylesheet language used to describe the presentation of a document written in HTML or XML",
+									aria-label="A stylesheet language used to describe the presentation of a document written in HTML or XML"
+								) CSS3,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://sass-lang.com/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A preprocessor scripting language that is interpreted or compiled into CSS",
+									aria-label="A preprocessor scripting language that is interpreted or compiled into CSS"
+								) Sass,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://lesscss.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A backwards-compatible language extension for CSS",
+									aria-label="A backwards-compatible language extension for CSS"
+								) Less
+							li Responsive Web Design
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://tailwindcss.com/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A utility-first CSS framework for rapidly building custom designs",
+									aria-label="A utility-first CSS framework for rapidly building custom designs"
+								) Tailwindcss,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://ant.design/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A design system for enterprise-level products",
+									aria-label="A design system for enterprise-level products"
+								) Ant Design,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://material.io/design",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A design system created by Google",
+									aria-label="A design system created by Google"
+								) Material Design,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://getbootstrap.com/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="The world's most popular front-end open source toolkit",
+									aria-label="The world's most popular front-end open source toolkit"
+								) Bootstrap
+							li
+								| Bundlers:
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://vitejs.dev/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="Next Generation Frontend Tooling",
+									aria-label="Next Generation Frontend Tooling"
+								) Vite,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://webpack.js.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A static module bundler for modern JavaScript applications",
+									aria-label="A static module bundler for modern JavaScript applications"
+								) Webpack,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://parceljs.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="Blazing fast, zero configuration web application bundler",
+									aria-label="Blazing fast, zero configuration web application bundler"
+								) Parcel
+							li
+								| Visualization:
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://observablehq.com/plot/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A javaScript library for exploratory data visualization",
+									aria-label="A javaScript library for exploratory data visualization"
+								) Observable Plot,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://d3js.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A JavaScript library for manipulating documents based on data",
+									aria-label="A JavaScript library for manipulating documents based on data"
+								) D3.js,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://particles.js.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A lightweight JavaScript library for creating particles",
+									aria-label="A lightweight JavaScript library for creating particles"
+								) Particle.js,
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://threejs.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A cross-browser JavaScript library and API used to create and display animated 3D computer graphics",
+									aria-label="A cross-browser JavaScript library and API used to create and display animated 3D computer graphics"
+								) Three.js
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://nextjs.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="The React Framework for Production",
+									aria-label="The React Framework for Production"
+								) NextJS(React framework)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://nuxtjs.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="The Intuitive Vue Framework",
+									aria-label="The Intuitive Vue Framework"
+								) NuxtJS(Vue framework)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://kit.svelte.dev/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="The fastest way to build Svelte apps",
+									aria-label="The fastest way to build Svelte apps"
+								) SvelteKit(Svelte framework)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://www.gatsbyjs.com/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A React-based open source framework for creating websites and apps",
+									aria-label="A React-based open source framework for creating websites and apps"
+								) Gatsby(Static site generator)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://storybook.js.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A tool for building UI components and pages in isolation",
+									aria-label="A tool for building UI components and pages in isolation"
+								) Storybook(UI component explorer)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://jestjs.io/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A delightful JavaScript Testing Framework with a focus on simplicity",
+									aria-label="A delightful JavaScript Testing Framework with a focus on simplicity"
+								) Jest(Testing framework)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://www.cypress.io/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="Fast, easy and reliable testing for anything that runs in a browser",
+									aria-label="Fast, easy and reliable testing for anything that runs in a browser"
+								) Cypress(E2E testing)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://playwright.dev/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="Reliable end-to-end testing for modern web apps",
+									aria-label="Reliable end-to-end testing for modern web apps"
+								) Playwright(E2E testing)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://redux.js.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A Predictable State Container for JS Apps",
+									aria-label="A Predictable State Container for JS Apps"
+								) Redux(State management)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://mobx.js.org/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="Simple, scalable state management",
+									aria-label="Simple, scalable state management"
+								) MobX(State management)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://zustand-demo.pmnd.rs/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A small, fast and scalable bearbones state-management solution",
+									aria-label="A small, fast and scalable bearbones state-management solution"
+								) Zustand(State management)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://www.apollographql.com/docs/react/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A complete state management library for JavaScript apps",
+									aria-label="A complete state management library for JavaScript apps"
+								) Apollo Client(GraphQL client)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://axios-http.com/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="Promise based HTTP client for the browser and node.js",
+									aria-label="Promise based HTTP client for the browser and node.js"
+								) Axios(HTTP client)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://lodash.com/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A modern JavaScript utility library delivering modularity, performance & extras",
+									aria-label="A modern JavaScript utility library delivering modularity, performance & extras"
+								) Lodash(Utility library)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://rxjs.dev/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A library for reactive programming using Observables",
+									aria-label="A library for reactive programming using Observables"
+								) RxJS(Reactive programming library)
+							li
+								a.rounded-sm.text-nls-green.transition.underline-offset-2.underline(
+									href="https://www.khronos.org/webgl/",
+									class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-green focus:bg-nls-green focus:text-black hover:text-white focus:no-underline hover:decoration-2",
+									title="A JavaScript API for rendering interactive 2D and 3D graphics",
+									aria-label="A JavaScript API for rendering interactive 2D and 3D graphics"
+								) WebGL(3D graphics)
+				// endregion
+				// region DevOps
+				div
+					details.mb-4
+						summary.rounded-sm.transition.underline-offset-2.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer.text-nls-blue(
+							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-blue focus:bg-nls-blue focus:text-black focus:no-underline"
+						) DevOps &amp; Cloud
+						ul.list-disc.list-inside.text-gray-400
+							li
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://www.docker.com/",
+									class="hover:text-white hover:decoration-2",
+									title="A platform for developing, shipping, and running applications",
+									aria-label="A platform for developing, shipping, and running applications"
+								) Docker,
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://kubernetes.io/",
+									class="hover:text-white hover:decoration-2",
+									title="An open-source system for automating deployment, scaling, and management of containerized applications",
+									aria-label="An open-source system for automating deployment, scaling, and management of containerized applications"
+								) Kubernetes
+							li
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://azure.microsoft.com/",
+									class="hover:text-white hover:decoration-2",
+									title="Microsoft's cloud computing platform",
+									aria-label="Microsoft's cloud computing platform"
+								) Azure,
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://cloud.google.com/",
+									class="hover:text-white hover:decoration-2",
+									title="Google's suite of cloud computing services",
+									aria-label="Google's suite of cloud computing services"
+								) Google Cloud
+							li
+								| CI/CD (
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://www.jenkins.io/",
+									class="hover:text-white hover:decoration-2",
+									title="An open source automation server",
+									aria-label="An open source automation server"
+								) Jenkins,
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/",
+									class="hover:text-white hover:decoration-2",
+									title="GitLab's built-in Continuous Integration",
+									aria-label="GitLab's built-in Continuous Integration"
+								) GitLab CI,
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://github.com/features/actions",
+									class="hover:text-white hover:decoration-2",
+									title="Automate your workflow from idea to production",
+									aria-label="Automate your workflow from idea to production"
+								) GitHub Actions
+								| )
+							li
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://www.terraform.io/",
+									class="hover:text-white hover:decoration-2",
+									title="An open-source infrastructure as code software tool",
+									aria-label="An open-source infrastructure as code software tool"
+								) Terraform
+							li
+								| Monitoring (
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://prometheus.io/",
+									class="hover:text-white hover:decoration-2",
+									title="An open-source monitoring system with a dimensional data model",
+									aria-label="An open-source monitoring system with a dimensional data model"
+								) Prometheus,
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://grafana.com/",
+									class="hover:text-white hover:decoration-2",
+									title="An open-source platform for monitoring and observability",
+									aria-label="An open-source platform for monitoring and observability"
+								) Grafana
+								| )
+							li
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://httpd.apache.org/",
+									class="hover:text-white hover:decoration-2",
+									title="A robust, commercial-grade, featureful, and freely-available source code implementation of an HTTP (Web) server",
+									aria-label="A robust, commercial-grade, featureful, and freely-available source code implementation of an HTTP (Web) server"
+								) Apache,
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://www.nginx.com/",
+									class="hover:text-white hover:decoration-2",
+									title="A web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache",
+									aria-label="A web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache"
+								) Nginx
+							li
+								| Message Queuing:
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://kafka.apache.org/",
+									class="hover:text-white hover:decoration-2",
+									title="A distributed streaming platform",
+									aria-label="A distributed streaming platform"
+								) Kafka
+							li
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://www.sonarqube.org/",
+									class="hover:text-white hover:decoration-2",
+									title="An open-source platform for continuous inspection of code quality",
+									aria-label="An open-source platform for continuous inspection of code quality"
+								) Sonarqube
+							li
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://sentry.io/",
+									class="hover:text-white hover:decoration-2",
+									title="Application monitoring and error tracking software",
+									aria-label="Application monitoring and error tracking software"
+								) Sentry(Error tracking)
+							li
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://developers.google.com/web/tools/lighthouse",
+									class="hover:text-white hover:decoration-2",
+									title="An open-source, automated tool for improving the quality of web pages",
+									aria-label="An open-source, automated tool for improving the quality of web pages"
+								) Lighthouse(Performance, accessibility, and SEO auditing)
+							li
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://www.webpagetest.org/",
+									class="hover:text-white hover:decoration-2",
+									title="Website performance and optimization test",
+									aria-label="Website performance and optimization test"
+								) WebPageTest(Performance testing)
+							li
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://pptr.dev/",
+									class="hover:text-white hover:decoration-2",
+									title="A Node library which provides a high-level API to control Chrome or Chromium over the DevTools Protocol",
+									aria-label="A Node library which provides a high-level API to control Chrome or Chromium over the DevTools Protocol"
+								) Puppeteer(Headless browser automation)
+							li
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://www.selenium.dev/",
+									class="hover:text-white hover:decoration-2",
+									title="A portable framework for testing web applications",
+									aria-label="A portable framework for testing web applications"
+								) Selenium(Browser automation)
+							li
+								a.text-nls-blue.transition.underline-offset-2.underline(
+									href="https://nx.dev/",
+									class="hover:text-white hover:decoration-2",
+									title="Smart, Fast and Extensible Build System",
+									aria-label="Smart, Fast and Extensible Build System"
+								) Nx(Monorepo tooling)
+				// endregion
+				// region Backend
+				div
+					details.mb-4
+						summary.rounded-sm.transition.underline-offset-2.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer.text-nls-violet(
+							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-violet focus:bg-nls-violet focus:text-black focus:no-underline"
+						) Backend Technologies
+						ul.list-disc.list-inside.text-gray-400
+							li
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://nodejs.org/",
+									class="hover:text-white hover:decoration-2",
+									title="A JavaScript runtime built on Chrome's V8 JavaScript engine",
+									aria-label="A JavaScript runtime built on Chrome's V8 JavaScript engine"
+								) Node.js,
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://expressjs.com/",
+									class="hover:text-white hover:decoration-2",
+									title="Fast, unopinionated, minimalist web framework for Node.js",
+									aria-label="Fast, unopinionated, minimalist web framework for Node.js"
+								) Express.js
+							li
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://www.php.net/",
+									class="hover:text-white hover:decoration-2",
+									title="A popular general-purpose scripting language",
+									aria-label="A popular general-purpose scripting language"
+								) PHP,
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://laravel.com/",
+									class="hover:text-white hover:decoration-2",
+									title="A web application framework with expressive, elegant syntax",
+									aria-label="A web application framework with expressive, elegant syntax"
+								) Laravel,
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://symfony.com/",
+									class="hover:text-white hover:decoration-2",
+									title="A set of reusable PHP components",
+									aria-label="A set of reusable PHP components"
+								) Symfony
+							li
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://www.java.com/",
+									class="hover:text-white hover:decoration-2",
+									title="A general-purpose programming language",
+									aria-label="A general-purpose programming language"
+								) Java,
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://spring.io/projects/spring-boot",
+									class="hover:text-white hover:decoration-2",
+									title="An extension of the Spring framework",
+									aria-label="An extension of the Spring framework"
+								) Spring Boot,
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://quarkus.io/",
+									class="hover:text-white hover:decoration-2",
+									title="A Kubernetes Native Java stack",
+									aria-label="A Kubernetes Native Java stack"
+								) Quarkus
+							li
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://www.python.org/",
+									class="hover:text-white hover:decoration-2",
+									title="A programming language that lets you work quickly and integrate systems more effectively",
+									aria-label="A programming language that lets you work quickly and integrate systems more effectively"
+								) Python,
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://www.djangoproject.com/",
+									class="hover:text-white hover:decoration-2",
+									title="A high-level Python Web framework",
+									aria-label="A high-level Python Web framework"
+								) Django,
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://flask.palletsprojects.com/",
+									class="hover:text-white hover:decoration-2",
+									title="A lightweight WSGI web application framework",
+									aria-label="A lightweight WSGI web application framework"
+								) Flask,
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://fastapi.tiangolo.com/",
+									class="hover:text-white hover:decoration-2",
+									title="A modern, fast (high-performance), web framework for building APIs with Python 3.6+",
+									aria-label="A modern, fast (high-performance), web framework for building APIs with Python 3.6+"
+								) FastAPI
+							li
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://golang.org/",
+									class="hover:text-white hover:decoration-2",
+									title="An open source programming language that makes it easy to build simple, reliable, and efficient software",
+									aria-label="An open source programming language that makes it easy to build simple, reliable, and efficient software"
+								) Go,
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://www.rust-lang.org/",
+									class="hover:text-white hover:decoration-2",
+									title="A language empowering everyone to build reliable and efficient software",
+									aria-label="A language empowering everyone to build reliable and efficient software"
+								) Rust
+							li
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://restfulapi.net/",
+									class="hover:text-white hover:decoration-2",
+									title="Representational State Transfer",
+									aria-label="Representational State Transfer"
+								) RESTful APIs,
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://graphql.org/",
+									class="hover:text-white hover:decoration-2",
+									title="A query language for your API",
+									aria-label="A query language for your API"
+								) GraphQL
+							li
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://hono.dev/",
+									class="hover:text-white hover:decoration-2",
+									title="Ultrafast web framework for the Edges",
+									aria-label="Ultrafast web framework for the Edges"
+								) Hono
+							li
+								| Runtimes:
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://bun.sh/",
+									class="hover:text-white hover:decoration-2",
+									title="A fast all-in-one JavaScript runtime",
+									aria-label="A fast all-in-one JavaScript runtime"
+								) Bun,
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://deno.land/",
+									class="hover:text-white hover:decoration-2",
+									title="A secure runtime for JavaScript and TypeScript",
+									aria-label="A secure runtime for JavaScript and TypeScript"
+								) Deno
+							li
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://nestjs.com/",
+									class="hover:text-white hover:decoration-2",
+									title="A progressive Node.js framework for building efficient and scalable server-side applications",
+									aria-label="A progressive Node.js framework for building efficient and scalable server-side applications"
+								) NestJS(Node.js framework)
+							li
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://www.fastify.io/",
+									class="hover:text-white hover:decoration-2",
+									title="Fast and low overhead web framework, for Node.js",
+									aria-label="Fast and low overhead web framework, for Node.js"
+								) Fastify(Node.js framework)
+							li
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://typeorm.io/",
+									class="hover:text-white hover:decoration-2",
+									title="ORM for TypeScript and JavaScript",
+									aria-label="ORM for TypeScript and JavaScript"
+								) TypeORM(ORM for TypeScript)
+							li
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://www.prisma.io/",
+									class="hover:text-white hover:decoration-2",
+									title="Next-generation Node.js and TypeScript ORM",
+									aria-label="Next-generation Node.js and TypeScript ORM"
+								) Prisma(Database toolkit)
+							li
+								a.text-nls-violet.transition.underline-offset-2.underline(
+									href="https://knexjs.org/",
+									class="hover:text-white hover:decoration-2",
+									title="A SQL query builder for JavaScript",
+									aria-label="A SQL query builder for JavaScript"
+								) Knex.js(SQL query builder)
+				// endregion
+				// region Data
+				div
+					details.mb-4
+						summary.rounded-sm.transition.underline-offset-2.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer.text-nls-purple(
+							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-purple focus:bg-nls-purple focus:text-black focus:no-underline"
+						) Database &amp; Data
+						ul.list-disc.list-inside.text-gray-400
+							li
+								| SQL (
+								a.text-nls-purple.transition.underline-offset-2.underline(
+									href="https://www.mysql.com/",
+									class="hover:text-white hover:decoration-2",
+									title="The world's most popular open source database",
+									aria-label="The world's most popular open source database"
+								) MySQL,
+								a.text-nls-purple.transition.underline-offset-2.underline(
+									href="https://www.postgresql.org/",
+									class="hover:text-white hover:decoration-2",
+									title="The world's most advanced open source database",
+									aria-label="The world's most advanced open source database"
+								) PostgreSQL
+								| )
+							li
+								| NoSQL (
+								a.text-nls-purple.transition.underline-offset-2.underline(
+									href="https://www.mongodb.com/",
+									class="hover:text-white hover:decoration-2",
+									title="A general purpose, document-based, distributed database",
+									aria-label="A general purpose, document-based, distributed database"
+								) MongoDB,
+								a.text-nls-purple.transition.underline-offset-2.underline(
+									href="https://cassandra.apache.org/",
+									class="hover:text-white hover:decoration-2",
+									title="A free and open-source, distributed, wide column store, NoSQL database management system",
+									aria-label="A free and open-source, distributed, wide column store, NoSQL database management system"
+								) Cassandra,
+								a.text-nls-purple.transition.underline-offset-2.underline(
+									href="https://redis.io/",
+									class="hover:text-white hover:decoration-2",
+									title="An open source, in-memory data structure store",
+									aria-label="An open source, in-memory data structure store"
+								) Redis
+								| )
+							li
+								a.text-nls-purple.transition.underline-offset-2.underline(
+									href="https://www.elastic.co/elasticsearch/",
+									class="hover:text-white hover:decoration-2",
+									title="A distributed, RESTful search and analytics engine",
+									aria-label="A distributed, RESTful search and analytics engine"
+								) Elasticsearch
+							li Data Analysis &amp; Visualization
+				// endregion
+				// region Cross-Platform
+				div
+					details.mb-4
+						summary.rounded-sm.transition.underline-offset-2.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer.text-nls-pink(
+							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-pink focus:bg-nls-pink focus:text-black focus:no-underline"
+						) Cross-Platform Development
+						ul.list-disc.list-inside.text-gray-400
+							li
+								| Desktop Apps:
+								a.text-nls-pink.transition.underline-offset-2.underline(
+									href="https://www.electronjs.org/",
+									class="hover:text-white hover:decoration-2",
+									title="Build cross-platform desktop apps with JavaScript, HTML, and CSS",
+									aria-label="Build cross-platform desktop apps with JavaScript, HTML, and CSS"
+								) Electron,
+								a.text-nls-pink.transition.underline-offset-2.underline(
+									href="https://tauri.app/",
+									class="hover:text-white hover:decoration-2",
+									title="Build smaller, faster, and more secure desktop applications with a web frontend",
+									aria-label="Build smaller, faster, and more secure desktop applications with a web frontend"
+								) Tauri
+							li
+								| Mobile Apps:
+								a.text-nls-pink.transition.underline-offset-2.underline(
+									href="https://reactnative.dev/",
+									class="hover:text-white hover:decoration-2",
+									title="A framework for building native apps using React",
+									aria-label="A framework for building native apps using React"
+								) React Native,
+								a.text-nls-pink.transition.underline-offset-2.underline(
+									href="https://flutter.dev/",
+									class="hover:text-white hover:decoration-2",
+									title="Google's UI toolkit for building natively compiled applications",
+									aria-label="Google's UI toolkit for building natively compiled applications"
+								) Flutter,
+								a.text-nls-pink.transition.underline-offset-2.underline(
+									href="https://cordova.apache.org/",
+									class="hover:text-white hover:decoration-2",
+									title="Mobile apps with HTML, CSS & JS",
+									aria-label="Mobile apps with HTML, CSS & JS"
+								) Cordova
+							li
+								a.text-nls-pink.transition.underline-offset-2.underline(
+									href="https://web.dev/progressive-web-apps/",
+									class="hover:text-white hover:decoration-2",
+									title="Websites that took all the right vitamins",
+									aria-label="Websites that took all the right vitamins"
+								) Progressive Web Apps (PWAs)
+				// endregion
+				// region Best Practices
+				div
+					details.mb-4
+						summary.rounded-sm.transition.underline-offset-2.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer.text-nls-red(
+							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-red focus:bg-nls-red focus:text-black focus:no-underline"
+						) Development Best Practices
+						ul.list-disc.list-inside.text-gray-400
+							li
+								a.text-nls-red.transition.underline-offset-2.underline(
+									href="https://www.w3.org/WAI/standards-guidelines/wcag/",
+									class="hover:text-white hover:decoration-2",
+									title="Web Content Accessibility Guidelines",
+									aria-label="Web Content Accessibility Guidelines"
+								) Accessibility (a11y): WCAG,
+								a.text-nls-red.transition.underline-offset-2.underline(
+									href="https://www.w3.org/WAI/standards-guidelines/aria/",
+									class="hover:text-white hover:decoration-2",
+									title="Accessible Rich Internet Applications",
+									aria-label="Accessible Rich Internet Applications"
+								) ARIA
+							li
+								| Internationalization (i18n):
+								a.text-nls-red.transition.underline-offset-2.underline(
+									href="https://www.i18next.com/",
+									class="hover:text-white hover:decoration-2",
+									title="Internationalization framework",
+									aria-label="Internationalization framework"
+								) i18next,
+								a.text-nls-red.transition.underline-offset-2.underline(
+									href="https://weblate.org/",
+									class="hover:text-white hover:decoration-2",
+									title="Web-based continuous localization system",
+									aria-label="Web-based continuous localization system"
+								) Weblate,
+								a.text-nls-red.transition.underline-offset-2.underline(
+									href="https://localize.co/",
+									class="hover:text-white hover:decoration-2",
+									title="Translation management platform",
+									aria-label="Translation management platform"
+								) Localize
+							li Performance Optimization
+							li SEO Best Practices
+							li
+								a.text-nls-red.transition.underline-offset-2.underline(
+									href="https://owasp.org/",
+									class="hover:text-white hover:decoration-2",
+									title="Open Web Application Security Project",
+									aria-label="Open Web Application Security Project"
+								) Web Security (OWASP)
+				// endregion
+				// region Tracking
+				div
+					details.mb-4
+						summary.rounded-sm.transition.underline-offset-2.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer.text-nls-orange(
+							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-orange focus:bg-nls-orange focus:text-black focus:no-underline"
+						) Analytics &amp; Tracking
+						ul.list-disc.list-inside.text-gray-400
+							li
+								a.text-nls-orange.transition.underline-offset-2.underline(
+									href="https://umami.is/",
+									class="hover:text-white hover:decoration-2",
+									title="Simple, fast, privacy-focused alternative to Google Analytics",
+									aria-label="Simple, fast, privacy-focused alternative to Google Analytics"
+								) Umami
+							li
+								a.text-nls-orange.transition.underline-offset-2.underline(
+									href="https://analytics.google.com/",
+									class="hover:text-white hover:decoration-2",
+									title="Web analytics service offered by Google",
+									aria-label="Web analytics service offered by Google"
+								) Google Analytics
+							li
+								a.text-nls-orange.transition.underline-offset-2.underline(
+									href="https://amplitude.com/",
+									class="hover:text-white hover:decoration-2",
+									title="Product analytics platform",
+									aria-label="Product analytics platform"
+								) Amplitude
+							li
+								a.text-nls-orange.transition.underline-offset-2.underline(
+									href="https://www.hotjar.com/",
+									class="hover:text-white hover:decoration-2",
+									title="Behavior analytics and user feedback platform",
+									aria-label="Behavior analytics and user feedback platform"
+								) Hotjar
+				// endregion
+			// endregion
+
+//section.bg-nls-black.text-white
+// .p-8(class="sm:p-20")
+//   .max-w-screen-md.mx-auto
+//     h2.text-2xl.mb-4= computerScience.heading
+//     p.mb-8.max-w-prose= computerScience.description
+//     .grid.grid-cols-1.md\:grid-cols-1.gap-6.mb-8
+//       .mb-4
+//         details
+//           summary.focus\:outline-none.rounded-sm.focus\:z-10.focus\:ring-4.focus\:ring-white.focus\:bg-white.focus\:text-black.focus\:no-underline.text-white.transition.underline-offset-2.mb-2.cursor-pointer= courses.dhbw.name
+//           ul.list-disc.list-inside
+//             each course in courses.dhbw.courses
+//               li= course
+//       .mb-4
+//         details
+//           summary.focus\:outline-none.rounded-sm.focus\:z-10.focus\:ring-4.focus\:ring-white.focus\:bg-white.focus\:text-black.focus\:no-underline.text-white.transition.underline-offset-2.mb-2.cursor-pointer= courses.lfh.name
+//           ul.list-disc.list-inside
+//             each course in courses.lfh.courses
+//               li= course
+//     h2.text-2xl.mb-4= technicalExpertise.heading
+//     p.mb-8.max-w-prose= technicalExpertise.description
+//     .grid.grid-cols-1.md\:grid-cols-1.gap-6.mb-8
+//       each category in categories
+//         .mb-4
+//           details
+//             summary(class=`focus\:outline-none rounded-sm focus\:z-10 focus\:ring-4 focus\:ring-${category.color} focus\:bg-${category.color} focus\:text-black focus\:no-underline transition underline-offset-2 mb-2 cursor-pointer text-md font-semibold mb-2 cursor-pointer text-${category.color}`)= category.name
+//             ul.list-disc.list-inside.text-gray-400
+//               // Content for each category would go here

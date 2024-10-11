@@ -1,0 +1,20 @@
+mixin TechnologySection(title, technologies, color, open)
+	div
+		details.mb-4(open=open)
+			summary.rounded-sm.transition.underline-offset-2.mb-2.cursor-pointer.text-md.font-semibold.mb-2(
+				class=`cursor-pointer text-${color} focus:outline-none focus:z-10 focus:ring-4 focus:ring-${color} focus:bg-${color} focus:text-black focus:no-underline`
+			)= title
+			ul.list-disc.list-inside.text-gray-400
+				each tech, index in technologies
+					li
+						if tech.url && tech.description
+							a.rounded-sm.transition.underline-offset-2.underline(
+								href=tech.url,
+								class=`text-${color} focus:outline-none focus:z-10 focus:ring-4 focus:ring-${color} focus:bg-${color} focus:text-black hover:text-white focus:no-underline hover:decoration-2`,
+								title=tech.description,
+								aria-label=tech.description
+							)= index + " " + tech.name
+						else
+							span= tech.name || tech
+						if index !== technologies.length - 1
+							| ,

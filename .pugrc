@@ -23,7 +23,7 @@
 			"twitterTitle": "Michael W. Czechowski - Digital Transformation & Computer Science",
 			"twitterDescription": "Digital Transformation & Computer Science with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
 			"twitterImage": "./src/assets/twitter-image.png",
-			"umamiSrc": "https://umami.dailysh.it/umami.js",
+			"umamiSrc": "https://dailysh.it/u/umami.js",
 			"umamiId": "f91846ac-70d3-48d4-8639-c2be8a5e5f8b"
 		},
 		"footer": {
@@ -150,7 +150,37 @@
 				]
 			},
 			"expertise": {
-				"intro": "With over two decades of experience in software development and architecture, I've navigated the evolving landscape of technology, consistently delivering cutting-edge solutions across various domains."
+				"intro": "With over two decades of experience in software development and architecture, I've navigated the evolving landscape of technology, consistently delivering cutting-edge solutions across various domains.",
+				"frontendTechnologies": [
+					{
+						"name": "JavaScript (ES6+)",
+						"url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+						"description": "A high-level, interpreted programming language"
+					},
+					{
+						"name": "TypeScript",
+						"url": "https://www.typescriptlang.org/",
+						"description": "A typed superset of JavaScript that compiles to plain JavaScript"
+					},
+					{
+						"name": "React",
+						"url": "https://reactjs.org/",
+						"description": "A JavaScript library for building user interfaces"
+					}
+				],
+				"backendTechnologies": [
+					{
+						"name": "Node.js",
+						"url": "https://nodejs.org/"
+					},
+					"Express.js",
+					"PostgreSQL"
+				],
+				"otherSkills": [
+					"Agile Methodologies",
+					"Test-Driven Development",
+					"CI/CD"
+				]
 			}
 		}
 	}

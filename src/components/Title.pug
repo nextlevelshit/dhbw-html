@@ -4,13 +4,14 @@ header.bg-nls-black.text-white
 			object.w-full(data=title.logoSvg, type="image/svg+xml")
 		.text-center.max-w-3xl.center.py-8
 			h1.text-xl.mb-4.opacity-90(class="sm:text-5xl", itemprop="email")
-				| #{title.email[0]}
-				span.opacity-20 &ndash;
-				| #{title.email[1]}
-				span.opacity-20 &ndash;
-				| #{title.email[2]}
+				a(data-umami-event="email clicked", data-umami-event-label="email", href=footer.emailLink, itemprop="email")
+					| #{title.email[0]}
+					span.opacity-20 &ndash;
+					| #{title.email[1]}
+					span.opacity-20 &ndash;
+					| #{title.email[2]}
 			p.text-lg.opacity-80(class="sm:text-2xl", itemprop="name") #{title.name}
 			p.text-md.opacity-60(class="sm:text-xl", itemprop="jobTitle")
 				| #{title.jobTitle[0]}
 				wbr
-				| &amp; #{title.jobTitle[0]}
+				| &amp; #{title.jobTitle[1]}

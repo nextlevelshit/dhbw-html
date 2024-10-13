@@ -23,8 +23,8 @@
 			"twitterTitle": "Michael W. Czechowski - Digital Transformation & Computer Science",
 			"twitterDescription": "Digital Transformation & Computer Science with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
 			"twitterImage": "./src/assets/twitter-image.png",
-			"umamiSrc": "https://dailysh.it/u/umami.js",
-			"umamiId": "f91846ac-70d3-48d4-8639-c2be8a5e5f8b"
+			"umamiSrc": "https://dailysh.it/u/script.js",
+			"umamiId": "9e83ef75-cbfb-49cf-ae4f-a7485ca46ba8"
 		},
 		"footer": {
 			"title": "Let's Connect",

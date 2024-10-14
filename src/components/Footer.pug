@@ -52,7 +52,7 @@ footer#footer.bg-nls-black.text-white
 	a(
 		href=footer.riskUrl,
 		aria-label=footer.riskAriaLabel,
-		title=footer.riskTitle
+		title=footer.riskTitle,
 		onclick="umami.track('easter egg clicked', { category: 'footer', position: 'footer' })"
 	)
 		img.w-12.ml-auto(src=footer.riskImgSrc, alt=footer.riskImgAlt, class="mt-[1000vh]")

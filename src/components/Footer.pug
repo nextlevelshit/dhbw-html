@@ -1,13 +1,9 @@
-mixin Link(href, label, target, rel, additionalClasses)
-	a.transition-colors.text-white(
-		data-umami-event="footer link clicked",
-		data-umami-event-label=label,
-		href=href,
-		class=`hover:text-amber-300 ${additionalClasses || ''}`,
-		target=target,
-		rel=rel,
-		onclick="umami.track('signup-button', { name: 'newsletter', id: 123 })"
-	)
+mixin Link(href, label, target, rel)
+	- const eventName = "external link clicked";
+	- const eventCategory = "footer";
+	- const onclick = `umami.track('${eventName}', { category: 'icons', position: 'footer', label: '${label}' })`;
+
+	a.transition-colors.text-white(href=href, class="hover:text-amber-300", target=target, rel=rel, onclick=onclick)
 		block
 
 mixin Svg
@@ -22,7 +18,7 @@ footer.bg-nls-black.text-white
 			p.mb-4.max-w-prose #{footer.content}
 			.max-w-prose
 				.flex.items-center.space-x-6.mb-8
-					+Link(footer.githubUrl, 'github', 'noopener noreferrer', '_blank')
+					+Link(footer.githubUrl, 'github', '_blank', 'noopener noreferrer')
 						+Svg
 							path(
 								clip-rule="evenodd",
@@ -30,7 +26,7 @@ footer.bg-nls-black.text-white
 								fill-rule="evenodd",
 								style="fill: currentColor"
 							)
-					+Link(footer.linkedinUrl, 'linkedin', 'noopener noreferrer', '_blank')
+					+Link(footer.linkedinUrl, 'linkedin', '_blank', 'noopener noreferrer')
 						+Svg
 							path(
 								clip-rule="evenodd",
@@ -38,14 +34,18 @@ footer.bg-nls-black.text-white
 								fill-rule="evenodd",
 								style="fill: currentColor"
 							)
-					+Link(footer.xingUrl, 'xing', 'noopener noreferrer', '_blank')
+					+Link(footer.xingUrl, 'xing', '_blank', 'noopener noreferrer')
 						+Svg
 							path(
 								d="M18.188 0c-.517 0-.741.325-.927.66 0 0-7.455 13.224-7.702 13.657.015.024 4.919 9.023 4.919 9.023.17.308.436.66.967.66h3.454c.211 0 .375-.078.463-.22.089-.151.089-.346-.009-.536l-4.879-8.916c-.004-.006-.004-.016 0-.022L22.139.756c.095-.191.097-.387.006-.535C22.056.078 21.894 0 21.686 0h-3.498zM3.648 4.74c-.211 0-.385.074-.473.216-.09.149-.078.339.02.531l2.34 4.05c.004.01.004.016 0 .021L1.86 16.051c-.099.188-.093.381 0 .529.085.142.239.234.45.234h3.461c.518 0 .766-.348.945-.667l3.734-6.609-2.378-4.155c-.172-.315-.434-.659-.962-.659H3.648v.016z",
 								style="fill: currentColor"
 							)
-					+Link(footer.emailLink, 'email', '', '', 'uppercase font-semibold')
-						| #{footer.emailText}
+					a.transition-colors.text-white(
+						href=footer.emailLink,
+						class="hover:text-amber-300 uppercase font-semibold",
+						rel="noopener noreferrer",
+						onclick="umami.track('email clicked', { position: 'footer' })"
+					) #{footer.emailText}
 			// endregion
 	a(href=footer.riskUrl, aria-label=footer.riskAriaLabel, title=footer.riskTitle)
 		img.w-12.ml-auto(src=footer.riskImgSrc, alt=footer.riskImgAlt, class="mt-[1000vh]")

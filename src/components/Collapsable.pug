@@ -1,0 +1,40 @@
+//-
+	Collapsable Component
+	@param {Object} data - The data object containing the collapsable content
+	@param {Boolean} isOpen - The initial state of the collapsable content
+	@param {String} data.color - The color of the collapsable content
+	@param {String} data.category - The category of the collapsable content
+	@param {String} data.summary - The summary of the collapsable content
+	@param {Array} data.items - The items of the collapsable content
+mixin Collapsable(data, open)
+	- const isExpanded = open || false;
+	- const color = data.color || "orange";
+	- const category = data.category || "default";
+	- const linkEventName = "external link clicked";
+
+	div
+		details.mb-4(open=isExpanded)
+			summary.rounded-sm.transition.underline-offset-2.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer(
+				class=`text-nls-${color} focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-${color} focus:bg-nls-${color} focus:text-black focus:no-underline`,
+				onclick=`umami.track('collapsable clicked', { category: '${category}' })`
+			)= data.summary
+			ul.list-disc.list-inside.text-gray-400
+				each item in data.items
+					li
+						if item.text
+							= item.text
+						if item.links
+							each link, index in item.links
+								a.transition.underline-offset-2.underline(
+									class=`text-nls-${color} hover:text-white hover:decoration-2`,
+									href=link.url,
+									title=link.description,
+									target="_blank",
+									aria-label=link.description,
+									rel="noopener noreferrer",
+									onclick=`umami.track('${linkEventName}', { category: '${category}', position: 'collapsable', label: '${link.label}' })`
+								)= link.text
+								if index < item.links.length - 1
+									| ,
+						if item.suffix
+							= item.suffix

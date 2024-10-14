@@ -4,7 +4,7 @@ header.bg-nls-black.text-white
 			object.w-full(data=title.logoSvg, type="image/svg+xml")
 		.text-center.max-w-3xl.center.py-8
 			h1.text-xl.mb-4.opacity-90(class="sm:text-5xl", itemprop="email")
-				a(data-umami-event="email clicked", data-umami-event-label="email", href=footer.emailLink, itemprop="email")
+				a(onclick="umami.track('email clicked', { position: 'title' })", href=footer.emailLink, rel="noopener noreferrer", itemprop="email")
 					| #{title.email[0]}
 					span.opacity-20 &ndash;
 					| #{title.email[1]}

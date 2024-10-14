@@ -12,6 +12,9 @@ section.bg-nls-black.text-white
 								href=item.link.href,
 								class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline",
 								title=item.link.title,
+								target="_blank",
+								rel="noopener noreferrer",
+								onclick=`umami.track('external link clicked', { position: 'professional', label: '${item.link.label}' })`,
 								aria-label=item.link.ariaLabel
 							) #{item.link.text}
 						| #{item.text}

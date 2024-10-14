@@ -2,7 +2,7 @@ section#professional.bg-nls-black.text-white
 	.p-8(class="sm:p-20 min-h-[120vh]")
 		.max-w-screen-md.mx-auto
 			h2.text-2xl.mb-4 #{professional.title}
-			p.mb-8.max-w-prose
+			p.mb-8.max-w-prose.prose(class="lg:prose-xl")
 				| #{professional.description}
 			ul.list-disc.list-inside.mb-8
 				each item, i in professional.keyConcepts
@@ -18,7 +18,7 @@ section#professional.bg-nls-black.text-white
 								aria-label=item.link.ariaLabel
 							) #{item.link.text}
 						| #{item.text}
-				p.mb-8.mt-12.max-w-prose
+				p.mb-8.mt-12.max-w-prose.prose(class="lg:prose-xl")
 					| #{professional.principlesIntro}
 			ul.list-disc.list-inside.mb-8
 				each person, i in professional.principlesPeople

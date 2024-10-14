@@ -4,8 +4,8 @@
 			"lang": "en",
 			"charset": "UTF-8",
 			"viewport": "width=device-width, initial-scale=1.0",
-			"title": "NEXT LEVEL SHIT · Michael W. Czechowski - Digital Transformation & Computer Science in Stuttgart",
-			"description": "Michael W. Czechowski: Digital Transformation & Computer Science with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
+			"title": "NEXT LEVEL SHIT · Michael W. Czechowski - Digital Transformation & Software Architecture in Stuttgart",
+			"description": "Michael W. Czechowski: Digital Transformation & Software Architecture with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
 			"author": "Michael W. Czechowski",
 			"keywords": "software architect, academic, web development, university lecturer, Stuttgart, open source, software solutions, 20 years experience, Michael Czechowski",
 			"robots": "index, follow",
@@ -15,13 +15,13 @@
 			"rating": "general",
 			"ogType": "website",
 			"ogUrl": "https://dailysh.it/",
-			"ogTitle": "Michael W. Czechowski - Digital Transformation & Computer Science",
-			"ogDescription": "Digital Transformation & Computer Science with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
+			"ogTitle": "Michael W. Czechowski - Digital Transformation & Software Architecture",
+			"ogDescription": "Digital Transformation & Software Architecture with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
 			"ogImage": "./src/assets/og-image.png",
 			"twitterCard": "summary_large_image",
 			"twitterUrl": "https://dailysh.it/",
-			"twitterTitle": "Michael W. Czechowski - Digital Transformation & Computer Science",
-			"twitterDescription": "Digital Transformation & Computer Science with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
+			"twitterTitle": "Michael W. Czechowski - Digital Transformation & Software Architecture",
+			"twitterDescription": "Digital Transformation & Software Architecture with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
 			"twitterImage": "./src/assets/twitter-image.png",
 			"umamiSrc": "https://dailysh.it/u/script.js",
 			"umamiId": "9e83ef75-cbfb-49cf-ae4f-a7485ca46ba8"
@@ -38,7 +38,8 @@
 			"riskImgSrc": "./src/assets/nxlsht.png",
 			"riskImgAlt": "",
 			"riskAriaLabel": "Risk",
-			"riskTitle": "At your own risk"
+			"riskTitle": "At your own risk",
+			"gitea": "Gitea"
 		},
 		"title": {
 			"email": [
@@ -50,7 +51,7 @@
 			"logoSvg": "./src/assets/nls.svg",
 			"jobTitle": [
 				"Digital Transformation ",
-				"Computer Science"
+				"Software Architecture"
 			]
 		},
 		"professional": {
@@ -126,12 +127,13 @@
 		},
 		"academia": {
 			"intro": [
-				"Since 2021 at Leibniz Fachhochschule (LFH) in Hannover, Germany. I am a passionate advocate for open source software and have",
-				"been a university lecturer for over a decade, teaching web development, software engineering, and computer science. Also at DHBW Stuttgart, I am a lecturer for the course \"Web Development\" in the field of computer science."
+				"I am a passionate advocate for open source software and have been a university lecturer since this decade, teaching web development, software engineering, and computer science for economics.",
+				"At Leibniz Fachhochschule (LFH) in Hannover (Germany) I have had the change to teach my students the art of Social Engineering and how they can effectively protect them and there companies in this rarely tought chapter of computer security.",
+				"Also at DHBW Stuttgart, I am a lecturer for the course \"Web Development\" in the field of computer science and specialize on a deep dive into the world of bunderls, frameworks, software concepts and the latest technologies."
 			],
 			"sectionTitles": {
 				"computerScience": "Computer Science",
-				"expertise": "Expertise"
+				"expertise": "Software Architecture & Development"
 			},
 			"courseInstitutions": {
 				"dhbw": "Duale Hochschule Baden-Württemberg (DHBW)",

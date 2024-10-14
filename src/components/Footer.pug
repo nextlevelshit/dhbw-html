@@ -47,7 +47,7 @@ footer#footer.bg-nls-black.text-white
 						onclick="umami.track('email clicked', { position: 'footer' })"
 					) #{footer.emailText}
 					+Link("https://git.dailysh.it/nextlevelshit/dailysh.it", "gitea", "_blank", "noopener noreferrer")
-						| Powered by Gitea
+						| #{footer.gitea}
 			// endregion
 	a(
 		href=footer.riskUrl,

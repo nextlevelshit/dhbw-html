@@ -8,10 +8,18 @@ header.bg-nls-black.text-white
 				| #{title.jobTitle[0]}
 				wbr
 				| &amp; #{title.jobTitle[1]}
-			h1.text-xl.mb-4.opacity-90(class="sm:text-5xl", itemprop="email")
-				a(onclick="umami.track('email clicked', { position: 'title' })", href=footer.emailLink, rel="noopener noreferrer", itemprop="email")
-					| #{title.email[0]}
+			h1.text-lg.mt-8.opacity-90(
+				class="sm:text-5xl group", itemprop="email"
+				)
+				a(
+					onclick="umami.track('email clicked', { position: 'title' })",
+					onmouseover="umami.track('email hovered', { position: 'title' })",
+					href=footer.emailLink, rel="noopener noreferrer", itemprop="email"
+				)
+					span.whitespace-nowrap.items-center.opacity-10.transition(class="group-hover:opacity-100")
+						span 👋&nbsp;
+					span(class="group-hover:underline-2") #{title.email[0]}
 					span.opacity-20 &ndash;
-					| #{title.email[1]}
+					span(class="group-hover:opacity-20") #{title.email[1]}
 					span.opacity-20 &ndash;
-					| #{title.email[2]}
+					span(class="group-hover:opacity-20") #{title.email[2]}

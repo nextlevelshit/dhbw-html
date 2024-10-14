@@ -9,3 +9,25 @@ html.scroll-smooth(lang=lang)
 				include src/components/Professional
 				include src/components/Academia
 				include src/components/Footer
+
+		script.
+			const footerEl = document.querySelector("#footer");
+			const footerObserver = new IntersectionObserver((payload) => {
+				const hasScrolltedTo = payload.pop().isIntersecting;
+				if (hasScrolltedTo && window.hasOwnProperty("umami")) {
+					umami.track("scrolled to", {position: "footer", id: "footer"});
+					console.debug("scrolled to footer");
+				}
+			});
+			footerObserver.observe(footerEl);
+
+			const sections = document.querySelectorAll("section");
+			const sectionObserver = (id) =>
+				new IntersectionObserver((payload) => {
+					const hasScrolltedTo = payload.pop().isIntersecting;
+					if (hasScrolltedTo && window.hasOwnProperty("umami")) {
+						umami.track("scrolled to", {position: "section", id});
+						console.debug("scrolled to section with id", id);
+					}
+				});
+			sections.forEach((section) => sectionObserver(section.id).observe(section));

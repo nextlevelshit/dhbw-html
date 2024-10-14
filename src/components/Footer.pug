@@ -14,10 +14,9 @@ footer#footer.bg-nls-black.text-white
 	.p-8(class="sm:p-20 min-h-[120vh]")
 		.max-w-screen-md.mx-auto
 			// region Contact
-			h2.text-2xl.mb-4 #{footer.title}
-			p.mb-4.max-w-prose #{footer.content}
-			.max-w-prose
-				.flex.items-center.space-x-6.mb-8
+			h2.text-5xl.mb-4 #{footer.title}
+			p.mb-8.max-w-prose #{footer.content}
+				.flex.flex-col.items-center.space-y-12.mb-8(class="sm:flex-row sm:space-x-6 sm:space-y-0")
 					+Link(footer.githubUrl, 'github', '_blank', 'noopener noreferrer')
 						+Svg
 							path(

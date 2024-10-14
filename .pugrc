@@ -4,8 +4,8 @@
 			"lang": "en",
 			"charset": "UTF-8",
 			"viewport": "width=device-width, initial-scale=1.0",
-			"title": "NEXT LEVEL SHIT · Michael W. Czechowski - Digital Transformation & Software Architecture in Stuttgart",
-			"description": "Michael W. Czechowski: Digital Transformation & Software Architecture with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
+			"title": "NEXT LEVEL SHIT · Michael W. Czechowski - Web Technologies & Software Architecture in Stuttgart",
+		  	"description": "Michael W. Czechowski: Web Technologies & Software Architecture with 20+ years of experience. University lecturer in web development, expert in software solutions and open source. Trusted by C-Level executives for delivering strategic insights and innovative solutions.",
 			"author": "Michael W. Czechowski",
 			"keywords": "software architect, academic, web development, university lecturer, Stuttgart, open source, software solutions, 20 years experience, Michael Czechowski",
 			"robots": "index, follow",
@@ -15,21 +15,21 @@
 			"rating": "general",
 			"ogType": "website",
 			"ogUrl": "https://dailysh.it/",
-			"ogTitle": "Michael W. Czechowski - Digital Transformation & Software Architecture",
-			"ogDescription": "Digital Transformation & Software Architecture with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
+			"ogTitle": "Michael W. Czechowski - Web Technologies & Software Architecture",
+		  	"ogDescription": "Web Technologies & Software Architecture with 20+ years of experience. University lecturer in web development, expert in software solutions and open source. Trusted by C-Level executives for delivering strategic insights and innovative solutions.",
 			"ogImage": "./src/assets/og-image.png",
 			"twitterCard": "summary_large_image",
 			"twitterUrl": "https://dailysh.it/",
-			"twitterTitle": "Michael W. Czechowski - Digital Transformation & Software Architecture",
-			"twitterDescription": "Digital Transformation & Software Architecture with 20+ years of experience. University lecturer in web development, expert in software solutions and open source.",
+			"twitterTitle": "Michael W. Czechowski - Web Technologies & Software Architecture",
+		  	"twitterDescription": "Web Technologies & Software Architecture with 20+ years of experience. University lecturer in web development, expert in software solutions and open source. Trusted by C-Level executives for delivering strategic insights and innovative solutions.",
 			"twitterImage": "./src/assets/twitter-image.png",
 			"umamiSrc": "https://dailysh.it/u/script.js",
 			"umamiId": "9e83ef75-cbfb-49cf-ae4f-a7485ca46ba8"
 		},
 		"footer": {
 			"title": "Let's Connect",
-			"content": "I'm always eager to take on new challenges and collaborate on innovative projects. Whether you're looking to modernize your tech stack, scale your infrastructure, or develop cutting-edge applications, I bring the expertise and passion to drive your project to success. Let's discuss how we can work together to achieve your technology goals.",
-			"githubUrl": "https://github.com/nextlevelshit",
+		  	"content": "I'm always eager to take on new challenges and collaborate on innovative projects. Whether you're looking to modernize your tech stack, scale your infrastructure, or develop cutting-edge applications, I bring the expertise and passion to drive your project to success. With a proven track record of working with C-Level executives, I understand the strategic importance of technology in achieving business goals. Let's discuss how we can work together to achieve your technology goals and drive your business forward.",
+		  	"githubUrl": "https://github.com/nextlevelshit",
 			"linkedinUrl": "https://www.linkedin.com/in/michael-werner-czechowski/",
 			"xingUrl": "https://www.xing.com/profile/Michael_Czechowski",
 			"emailLink": "mailto:hello@dailysh.it?subject=Hi",
@@ -50,13 +50,13 @@
 			"name": "Michael W. Czechowski",
 			"logoSvg": "./src/assets/nls.svg",
 			"jobTitle": [
-				"Digital Transformation ",
+				"Web Technologies ",
 				"Software Architecture"
 			]
 		},
 		"professional": {
 			"title": "Professional Approach",
-			"description": "Good software stands on strong pillars and needs a solid foundation. I have a deep understanding of the principles and practices that make software reliable, scalable, and maintainable. My approach is based on the following key concepts:",
+		  	"description": "Good software stands on strong pillars and needs a solid foundation. I have a deep understanding of the principles and practices that make software reliable, scalable, and maintainable. My approach is based on the following key concepts: With decades of experience, I have honed my skills in delivering software solutions that not only meet but exceed the expectations of C-Level executives. My strategic insights and hands-on approach ensure that every project is aligned with the business objectives and delivers tangible results.",
 			"keyConcepts": [
 				{
 					"link": {
@@ -127,13 +127,13 @@
 		},
 		"academia": {
 			"intro": [
-				"I am a passionate advocate for open source software and have been a university lecturer since this decade, teaching web development, software engineering, and computer science for economics.",
-				"At Leibniz Fachhochschule (LFH) in Hannover (Germany) I have had the change to teach my students the art of Social Engineering and how they can effectively protect them and there companies in this rarely tought chapter of computer security.",
-				"Also at DHBW Stuttgart, I am a lecturer for the course \"Web Development\" in the field of computer science and specialize on a deep dive into the world of bunderls, frameworks, software concepts and the latest technologies."
+				"I am a passionate advocate for open source software and have been a university lecturer since this decade, teaching web development, software engineering, and computer science for economics. My extensive experience in the industry allows me to bring real-world insights into the classroom, preparing the next generation of software engineers for the challenges of tomorrow.",
+				"At Leibniz Fachhochschule (LFH) in Hannover (Germany) I have had the chance to teach my students the art of Social Engineering and how they can effectively protect themselves and their companies in this rarely taught chapter of computer security. My courses are designed to be highly interactive and practical, ensuring that students gain hands-on experience in tackling real-world security challenges.",
+				"Also at DHBW Stuttgart, I am a lecturer for the course \"Web Development\" in the field of computer science and specialize in a deep dive into the world of bundles, frameworks, software concepts, and the latest technologies. My teaching philosophy is centered around bridging the gap between theory and practice, equipping students with the skills they need to excel in the fast-paced world of technology."
 			],
 			"sectionTitles": {
 				"computerScience": "Computer Science",
-				"expertise": "Software Architecture & Development"
+				"expertise": "Software Architecture and Development"
 			},
 			"courseInstitutions": {
 				"dhbw": "Duale Hochschule Baden-Württemberg (DHBW)",
@@ -152,7 +152,7 @@
 				]
 			},
 			"expertise": {
-				"intro": "With over two decades of experience in software development and architecture, I've navigated the evolving landscape of technology, consistently delivering cutting-edge solutions across various domains.",
+			  	"intro": "With over two decades of experience in software development and architecture, I've navigated the evolving landscape of technology, consistently delivering cutting-edge solutions across various domains. My expertise spans a wide range of technologies and methodologies, enabling me to provide strategic guidance and hands-on support to organizations looking to innovate and stay ahead of the competition. Whether it's developing robust software architectures, implementing agile practices, or leveraging the latest in cloud and DevOps technologies, I bring a wealth of knowledge and experience to every project.",
 				"frontendTechnologies": {
 					"color": "green",
 					"category": "frontend technologies",

@@ -14,8 +14,8 @@ mixin Collapsable(data, open)
 
 	div
 		details.mb-4(open=isExpanded)
-			summary.rounded-sm.transition.underline-offset-2.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer(
-				class=`text-nls-${color} focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-${color} focus:bg-nls-${color} focus:text-black focus:no-underline`,
+			summary.rounded-sm.transition.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer(
+				class=`sm:text-lg text-nls-${color} focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-${color} focus:bg-nls-${color} focus:text-black focus:no-underline`,
 				onclick=`umami.track('collapsable clicked', { category: '${category}' })`
 			)= data.summary
 			ul.list-disc.list-inside.text-gray-400
@@ -35,6 +35,6 @@ mixin Collapsable(data, open)
 									onclick=`umami.track('${linkEventName}', { category: '${category}', position: 'collapsable', label: '${link.label}' })`
 								)= link.text
 								if index < item.links.length - 1
-									| ,
+									| ,&nbsp;
 						if item.suffix
-							= item.suffix
+							= ` ${item.suffix}`

@@ -3,12 +3,12 @@ header.bg-nls-black.text-white
 		.max-w-3xl.mb-8(class="w-4/5")
 			object.w-full(data=title.logoSvg, type="image/svg+xml")
 		.text-center.max-w-3xl.center.py-8
-			p.text-lg.opacity-80(class="sm:text-2xl", itemprop="name") #{title.name}
-			p.text-md.opacity-60(class="sm:text-xl", itemprop="jobTitle")
+			h2.text-xl.opacity-80(class="sm:text-2xl", itemprop="name")= title.name
+			h1.text-md.opacity-60(class="sm:text-lg", itemprop="jobTitle")
 				| #{title.jobTitle[0]}
 				wbr
 				| &amp; #{title.jobTitle[1]}
-			h1.text-lg.mt-8.opacity-90.group(class="sm:text-5xl", itemprop="email")
+			h2.text-2xl.mt-8.opacity-90.group(class="sm:text-5xl sm:mt-16", itemprop="email")
 				a(
 					onclick="umami.track('email clicked', { position: 'title' })",
 					onmouseover="umami.track('email hovered', { position: 'title' })",

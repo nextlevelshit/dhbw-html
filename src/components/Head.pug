@@ -35,7 +35,7 @@ head
 			"@context": "https://schema.org",
 			"@type": "Person",
 			"name": "Michael W. Czechowski",
-			"jobTitle": "Digital Transformation & Software Architecture",
+			"jobTitle": "Web Technologies & Software Architecture",
 			"url": "https://dailysh.it",
 			"sameAs": ["https://github.com/nextlevelshit", "https://www.linkedin.com/in/michael-werner-czechowski/", "https://www.xing.com/profile/Michael_Czechowski"]
 		}
@@ -46,7 +46,20 @@ head
 	script.
 		tailwind.config = {
 			theme: {
+				fontFamily: {
+					mono: ["Roboto Mono", "monospace"],
+					serif: ["Libre Baskerville", "serif"],
+					sans: ["Afacad Flux", "sans-serif"],
+				},
 				extend: {
+					fontSize: {
+						sm: "1rem",
+						base: "1.25rem",
+						xl: "1.563rem",
+						"2xl": "1.953rem",
+						"3xl": "2.441rem",
+						"4xl": "3.052rem",
+					},
 					colors: {
 						"nls-green": "#79C28D",
 						"nls-blue": "#5A99C3",
@@ -85,5 +98,12 @@ head
 			max-width: 80vw;
 		}
 	// endregion
+
+	link(rel="preconnect", href="https://fonts.googleapis.com")
+	link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+	link(
+		rel="stylesheet",
+		href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+	)
 
 	script(async, defer, data-website-id=head.umamiId, src=head.umamiSrc)

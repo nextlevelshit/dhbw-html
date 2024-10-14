@@ -5,3 +5,5 @@ dist
 # Temporary files
 .cache
 .idea
+# Secrets
+makefile

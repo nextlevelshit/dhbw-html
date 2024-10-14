@@ -8,8 +8,7 @@
 		"start": "parcel --public-url / index.pug --open",
 		"build": "parcel build index.pug",
 		"format": "npx prettier --write src/**/*.{ts,pug} index.pug package.json",
-		"scp": "scp -r ./dist/* tengo@tuttle.uberspace.de:/home/tengo/html",
-		"deploy": "rm -rf ./dist && npm run build && npm run scp"
+		"deploy": "make deploy"
 	},
 	"author": "Michael Werner Czechowski <mail@dailysh.it>",
 	"license": "Apache-2.0",

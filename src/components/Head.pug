@@ -81,6 +81,57 @@ head
 
 	// region Custom CSS
 	style.
+		/* Afacad Flux */
+		@font-face {
+			font-family: 'Afacad Flux';
+			src: url('/public/fonts/AfacadFlux-Medium.ttf') format('truetype');
+			font-weight: 500;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Afacad Flux';
+			src: url('/public/fonts/AfacadFlux-SemiBold.ttf') format('truetype');
+			font-weight: 600;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		/* Libre Baskerville */
+		@font-face {
+			font-family: 'Libre Baskerville';
+			src: url('/public/fonts/LibreBaskerville-Regular.ttf') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Libre Baskerville';
+			src: url('/public/fonts/LibreBaskerville-Bold.ttf') format('truetype');
+			font-weight: 700;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		/* Roboto Mono */
+		@font-face {
+			font-family: 'Roboto Mono';
+			src: url('/public/fonts/RobotoMono-Regular.ttf') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Roboto Mono';
+			src: url('/public/fonts/RobotoMono-SemiBold.ttf') format('truetype');
+			font-weight: 600;
+			font-style: normal;
+			font-display: swap;
+		}
+
 		html {
 			background: black;
 			color: black;
@@ -101,12 +152,6 @@ head
 			max-width: 80vw;
 		}
 	// endregion
-
-	link(rel="preconnect", href="https://fonts.googleapis.com")
-	link(
-		rel="stylesheet",
-		href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-	)
 
 	script(async, defer, data-website-id=head.umamiId, src=head.umamiSrc)
 

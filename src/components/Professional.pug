@@ -14,7 +14,7 @@ section#professional.bg-nls-black.text-white
 								title=item.link.title,
 								target="_blank",
 								rel="noopener noreferrer",
-								onclick=`umami.track('external link clicked', { position: 'professional', label: '${item.link.label}' })`,
+								onclick=`umami.track('external link clicked', { position: 'professional', label: '${item.link.label}', visitDuration: getVisitDuration() })`,
 								aria-label=item.link.ariaLabel
 							) #{item.link.text}
 						| #{item.text}

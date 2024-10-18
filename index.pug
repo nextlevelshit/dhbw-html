@@ -15,8 +15,8 @@ html.scroll-smooth(lang=lang)
 			const footerObserver = new IntersectionObserver((payload) => {
 				const hasScrolltedTo = payload.pop().isIntersecting;
 				if (hasScrolltedTo && window.hasOwnProperty("umami")) {
-					umami.track("scrolled to", {position: "footer", id: "footer"});
-					console.debug("scrolled to footer");
+					umami.track("scrolled to", {position: "footer", id: "footer", visitDuration: getVisitDuration()});
+					console.debug("scrolled to footer", {visitDuration: getVisitDuration()});
 				}
 			});
 			footerObserver.observe(footerEl);
@@ -26,8 +26,8 @@ html.scroll-smooth(lang=lang)
 				new IntersectionObserver((payload) => {
 					const hasScrolltedTo = payload.pop().isIntersecting;
 					if (hasScrolltedTo && window.hasOwnProperty("umami")) {
-						umami.track("scrolled to", {position: "section", id});
-						console.debug("scrolled to section with id", id);
+						umami.track("scrolled to", {position: "section", id, visitDuration: getVisitDuration()});
+						console.debug("scrolled to section with id", {id, visitDuation: getVisitDuration()});
 					}
 				});
 			sections.forEach((section) => sectionObserver(section.id).observe(section));

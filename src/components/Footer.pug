@@ -1,7 +1,7 @@
 mixin Link(href, label, target, rel)
 	- const eventName = "external link clicked";
 	- const eventCategory = "footer";
-	- const onclick = `umami.track('${eventName}', { category: 'icons', position: 'footer', label: '${label}' })`;
+	- const onclick = `umami.track('${eventName}', { category: 'icons', position: 'footer', label: '${label}', visitDuration: getVisitDuration() })`;
 
 	a.transition-colors.text-white(href=href, class="hover:text-amber-300", target=target, rel=rel, onclick=onclick)
 		block
@@ -43,7 +43,7 @@ footer#footer.bg-nls-black.text-white
 						href=footer.emailLink,
 						class="hover:text-amber-300",
 						rel="noopener noreferrer",
-						onclick="umami.track('email clicked', { position: 'footer' })"
+						onclick="umami.track('email clicked', { position: 'footer', visitDuration: getVisitDuration() })"
 					) #{footer.emailText}
 					+Link("https://git.dailysh.it/nextlevelshit/dailysh.it", "gitea", "_blank", "noopener noreferrer")
 						| #{footer.gitea}
@@ -52,6 +52,6 @@ footer#footer.bg-nls-black.text-white
 		href=footer.riskUrl,
 		aria-label=footer.riskAriaLabel,
 		title=footer.riskTitle,
-		onclick="umami.track('easter egg clicked', { category: 'footer', position: 'footer' })"
+		onclick="umami.track('easter egg clicked', { category: 'footer', position: 'footer', visitDuration: getVisitDuration() })"
 	)
 		img.w-12.ml-auto(src=footer.riskImgSrc, alt=footer.riskImgAlt, class="mt-[1000vh]")

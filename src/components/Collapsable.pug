@@ -16,7 +16,7 @@ mixin Collapsable(data, open)
 		details.mb-4(open=isExpanded)
 			summary.rounded-sm.transition.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer(
 				class=`sm:text-lg text-nls-${color} focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-${color} focus:bg-nls-${color} focus:text-black focus:no-underline`,
-				onclick=`umami.track('collapsable clicked', { category: '${category}' })`
+				onclick=`umami.track('collapsable clicked', { category: '${category}', visitDuration: getVisitDuration() })`
 			)= data.summary
 			ul.list-disc.list-inside.text-gray-400
 				each item in data.items
@@ -32,7 +32,7 @@ mixin Collapsable(data, open)
 									target="_blank",
 									aria-label=link.description,
 									rel="noopener noreferrer",
-									onclick=`umami.track('${linkEventName}', { category: '${category}', position: 'collapsable', label: '${link.label}' })`
+									onclick=`umami.track('${linkEventName}', { category: '${category}', position: 'collapsable', label: '${link.label}', visitDuration: getVisitDuration() })`
 								)= link.text
 								if index < item.links.length - 1
 									| ,&nbsp;

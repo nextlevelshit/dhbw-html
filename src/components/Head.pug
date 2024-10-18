@@ -107,3 +107,10 @@ head
 	)
 
 	script(async, defer, data-website-id=head.umamiId, src=head.umamiSrc)
+
+	script.
+		window.visitDuration = Date.now();
+
+		const getVisitDuration = () => {
+			return Math.floor((Date.now() - window.visitDuration) / 1000);
+		};

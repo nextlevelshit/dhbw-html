@@ -17,7 +17,7 @@ section#academia.bg-nls-black.text-white
 					details.mb-4
 						summary.rounded-sm.text-white.transition.underline-offset-2.mb-2.cursor-pointer(
 							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline",
-							onclick="umami.track('collapsable clicked', { category: 'courses dhbw' })"
+							onclick="umami.track('collapsable clicked', { category: 'courses dhbw', visitDuration: getVisitDuration() })"
 						)= academia.courseInstitutions.dhbw
 						ul.list-disc.list-inside
 							li= academia.courses.dhbw[0]
@@ -25,7 +25,7 @@ section#academia.bg-nls-black.text-white
 					details.mb-4
 						summary.rounded-sm.text-white.transition.underline-offset-2.mb-2.cursor-pointer(
 							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline",
-							onclick="umami.track('collapsable clicked', { category: 'courses leibniz-fh' })"
+							onclick="umami.track('collapsable clicked', { category: 'courses leibniz-fh', visitDuration: getVisitDuration() })"
 						)= academia.courseInstitutions.lfh
 						ul.list-disc.list-inside
 							each course in academia.courses.lfh

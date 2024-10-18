@@ -1,8 +1,12 @@
+include Collapsable
+include Title
+include Container
+
 section#professional.bg-nls-black.text-white
 	.p-8(class="sm:p-20 min-h-[120vh]")
-		.max-w-screen-md.mx-auto
-			h2.font-serif.text-xl.mb-4(class="sm:text-2xl w-5/6")= professional.title
-			p.mb-8.max-w-prose.prose(class="lg:prose-xl")
+		+Container
+			+Title("h2")= professional.title
+			p.mb-8.max-w-prose.prose.indent-3(class="lg:prose-xl")
 				| #{professional.description}
 			ul.list-disc.list-inside.mb-8
 				each item, i in professional.keyConcepts
@@ -22,4 +26,11 @@ section#professional.bg-nls-black.text-white
 					| #{professional.principlesIntro}
 			ul.list-disc.list-inside.mb-8
 				each person, i in professional.principlesPeople
-					li #{person.name} &ndash; #{person.concept}
+					// - const data = {"color":"orange","category":"tracking","summary":"Analytics & Tracking","items":[{"links":[{"text":"Umami","url":"https://umami.is/","description":"Simple, fast, privacy-focused alternative to Google Analytics","label":"Umami"}]},{"links":[{"text":"Google Analytics","url":"https://developers.google.com/analytics/","description":"Web analytics service offered by Google","label":"Google"}]},{"links":[{"text":"Amplitude","url":"https://amplitude.com/","description":"Product analytics platform","label":"Amplitude"}]},{"links":[{"text":"Hotjar","url":"https://www.hotjar.com/","description":"Behavior analytics and user feedback platform","label":"Hotjar"}]}]}
+					- const data = {summary: `${person.name} — ${person.concept}`, color: "white", category: "professional"};
+					- const isOpen = i === 0;
+					//li #{person.name} &ndash; #{person.concept} #{isOpen(i)}
+					+Collapsable(data, isOpen)
+						each paragraph, j in person.paragraphs
+							- const additionalClasses = j !== 0 ? "indent-3" : "";
+							p.pl-4(class=`sm:w-5/6 ${additionalClasses}`)= paragraph

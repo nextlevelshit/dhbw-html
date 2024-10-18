@@ -1,3 +1,5 @@
+include Container
+
 mixin Link(href, label, target, rel)
 	- const eventName = "external link clicked";
 	- const eventCategory = "footer";
@@ -12,7 +14,7 @@ mixin Svg
 
 footer#footer.bg-nls-black.text-white
 	.p-8(class="sm:p-20 min-h-[120vh]")
-		.max-w-screen-md.mx-auto
+		+Container
 			// region Contact
 			h2.text-5xl.mb-4 #{footer.title}
 			p.mb-8.max-w-prose #{footer.content}

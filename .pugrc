@@ -179,8 +179,8 @@
 			},
 			"expertise": {
 				"intro": [
-				  "With over two decades at the forefront of software development and architecture, I've navigated the ever-evolving landscape of technology, consistently delivering innovative solutions across diverse sectors.",
-				  "My expertise spans a comprehensive range of technologies and methodologies, enabling me to provide both strategic guidance and hands-on leadership to organizations seeking to innovate and maintain a competitive edge. From developing robust, scalable software architectures to implementing agile practices and leveraging the latest in cloud and DevOps technologies, I bring a wealth of knowledge and practical experience to every project. My approach is rooted in a deep understanding of both current trends and time-tested principles, ensuring solutions that are not only cutting-edge but also sustainable and aligned with long-term business objectives."
+					"With over two decades at the forefront of software development and architecture, I've navigated the ever-evolving landscape of technology, consistently delivering innovative solutions across diverse sectors.",
+					"My expertise spans a comprehensive range of technologies and methodologies, enabling me to provide both strategic guidance and hands-on leadership to organizations seeking to innovate and maintain a competitive edge. From developing robust, scalable software architectures to implementing agile practices and leveraging the latest in cloud and DevOps technologies, I bring a wealth of knowledge and practical experience to every project. My approach is rooted in a deep understanding of both current trends and time-tested principles, ensuring solutions that are not only cutting-edge but also sustainable and aligned with long-term business objectives."
 				],
 				"frontendTechnologies": {
 					"color": "green",

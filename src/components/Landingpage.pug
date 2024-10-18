@@ -9,11 +9,11 @@ header.bg-nls-black.text-white
 				itemprop="email"
 			)
 
-			img.z-0.left-0.top-0.right-0.bottom-20.absolute.w-full.opacity-0.transition(class="group-hover:opacity-80", src=landingpage.emojiSvg, type="image/svg+xml")
+			img.absolute.z-10.left-0.right-0.mx-auto.opacity-0.transition(class="top-[30vh] max-h-[37vh] group-hover:opacity-100 group-hover:scale-150", src=landingpage.emojiSvg, type="image/svg+xml")
 
-			object.w-full.absolute.z-10(class="group-hover:opacity-90", data=landingpage.logoSvg, type="image/svg+xml")
+			img.absolute.z-0.left-0.right-0.mx-auto.transition(class="h-[54vh] group-hover:opacity-60 group-hover:scale-50", src=landingpage.logoSvg)
 
-			.absolute.bottom-0.left-0.right-0
+			.absolute.bottom-0.left-0.right-0.z-40
 				.bottom-0.text-center.max-w-3xl.center.py-8
 					h2.text-xl.font-semibold.opacity-80(class="sm:text-2xl", itemprop="name")= landingpage.name
 					h1.text-md.opacity-80(class="sm:text-lg", itemprop="jobTitle")

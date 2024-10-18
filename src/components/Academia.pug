@@ -10,7 +10,7 @@ section#academia.bg-nls-black.text-white
 			.mb-12
 				.mb-8.max-w-prose.prose(class="lg:prose-xl")
 					each paragraph, i in academia.intro
-						- const additionalClasses = i !== 0 ? "indent-3" : "";
+						- const additionalClasses = i !== 0 ? "indent-3" : "mb-2 font-serif leading-tight sm:text-xl text-lg";
 						p(class=additionalClasses)= paragraph
 			// endregion
 
@@ -37,8 +37,10 @@ section#academia.bg-nls-black.text-white
 
 			// region Skills
 			+Title("h2")= academia.sectionTitles.expertise
-			p.mb-8.max-w-prose.prose(class="lg:prose-xl")
-				| #{academia.expertise.intro}
+			.mb-8.max-w-prose.prose(class="lg:prose-xl")
+				each paragraph, i in academia.expertise.intro
+					- const additionalClasses = i !== 0 ? "indent-3" : "mb-2 font-serif leading-tight sm:text-xl text-md";
+					p(class=additionalClasses)= paragraph
 			// endregion
 
 			// region Expertise

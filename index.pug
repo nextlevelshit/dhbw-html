@@ -6,8 +6,8 @@ html.scroll-smooth(lang=lang)
 		main.flex.flex-col
 			article(itemscope, itemtype="http://schema.org/Person")
 				include src/components/Landingpage
-				include src/components/Professional
 				include src/components/Academia
+				include src/components/Professional
 				include src/components/Footer
 
 		script.
@@ -31,3 +31,13 @@ html.scroll-smooth(lang=lang)
 					}
 				});
 			sections.forEach((section) => sectionObserver(section.id).observe(section));
+
+			let yearsOfAge = 0;
+			let yearsOfDeveloping = 0;
+
+			setInterval(() => {
+				yearsOfAge = (new Date().getTime() - new Date("1988-10-07").getTime()) / 1000 / 60 / 60 / 24 / 365.25;
+				yearsOfDeveloping = (new Date().getTime() - new Date("2005-07-07").getTime()) / 1000 / 60 / 60 / 24 / 365.25;
+				document.getElementById("yearsOfAge").innerText = yearsOfAge.toFixed(6);
+				document.getElementById("yearsOfDeveloping").innerText = yearsOfDeveloping.toFixed(6);
+			}, 100);

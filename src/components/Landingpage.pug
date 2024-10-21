@@ -1,47 +1,33 @@
 header.bg-nls-black.text-white
 	.teaser.p-8.flex.flex-col.items-center.justify-center(class="sm:p-20")
 		.max-w-3xl.group.mb-8.relative(class="w-4/5 min-h-[90vh]")
-			a.block(
-				onclick="umami.track('email clicked', { position: 'title', visitDuration: getVisitDuration() })",
-				onmouseover="umami.track('email hovered', { position: 'title', visitDuration: getVisitDuration() })",
-				href=footer.emailLink,
-				rel="noopener noreferrer",
-				itemprop="email"
+			img.absolute.z-10.left-0.right-0.mx-auto.opacity-0.transition(
+				class="top-[30vh] max-h-[37vh] group-hover:opacity-100 group-hover:scale-150",
+				src=landingpage.emojiSvg
 			)
-				img.absolute.z-10.left-0.right-0.mx-auto.opacity-0.transition(
-					class="top-[30vh] max-h-[37vh] group-hover:opacity-100 group-hover:scale-150",
-					src=landingpage.emojiSvg
-				)
 
 			img.absolute.z-0.left-0.right-0.mx-auto.transition(class="h-[54vh] group-hover:opacity-60 group-hover:scale-50", src=landingpage.logoSvg)
 
-			a.z-60.block(
-				onclick="umami.track('email clicked', { position: 'title', visitDuration: getVisitDuration() })",
-				onmouseover="umami.track('email hovered', { position: 'title', visitDuration: getVisitDuration() })",
-				href=footer.emailLink,
-				rel="noopener noreferrer",
-				itemprop="email"
-			)
-				.absolute.bottom-0.left-0.right-0.z-40
-					.bottom-0.text-center.max-w-3xl.center.py-8
-						h2.text-xl.font-semibold.opacity-80.transition(class="sm:text-2xl group-hover:opacity-100", itemprop="name")= landingpage.name
-						h1.text-md.opacity-80.transition(class="sm:text-lg group-hover:opacity-100", itemprop="jobTitle")
-							| #{landingpage.jobTitle[0]}
-							|
-							wbr
-							|
-							| &amp; #{landingpage.jobTitle[1]}
-						a.z-60.block(
-							onclick="umami.track('email clicked', { position: 'title', visitDuration: getVisitDuration() })",
-							onmouseover="umami.track('email hovered', { position: 'title', visitDuration: getVisitDuration() })",
-							href=footer.emailLink,
-							rel="noopener noreferrer",
-							itemprop="email"
-						)
-							h2.text-2xl.mt-8(class="sm:text-5xl sm:mt-16", itemprop="email")
-								.whitespace-nowrap.items-center.transition(class="group-hover:opacity-100")
-									span(class="group-hover:opacity-100") #{landingpage.email[0]}
-									span.opacity-20 &ndash;
-									span.opacity-90(class="group-hover:opacity-20") #{landingpage.email[1]}
-									span.opacity-20 &ndash;
-									span.opacity-90(class="group-hover:opacity-20") #{landingpage.email[2]}
+			.absolute.bottom-0.left-0.right-0.z-40
+				.bottom-0.text-center.max-w-3xl.center.py-8
+					h2.text-xl.font-semibold.opacity-80.transition(class="sm:text-2xl group-hover:opacity-100", itemprop="name")= landingpage.name
+					h1.text-md.opacity-80.transition(class="sm:text-lg group-hover:opacity-100", itemprop="jobTitle")
+						| #{landingpage.jobTitle[0]}
+						|
+						wbr
+						|
+						| &amp; #{landingpage.jobTitle[1]}
+						h2.text-2xl.mt-8(class="sm:text-5xl sm:mt-16", itemprop="email")
+							.whitespace-nowrap.items-center.transition(class="group-hover:opacity-100")
+								span(class="group-hover:opacity-100") #{landingpage.email[0]}
+								span.opacity-20 &ndash;
+								span.opacity-90(class="group-hover:opacity-20") #{landingpage.email[1]}
+								span.opacity-20 &ndash;
+								span.opacity-90(class="group-hover:opacity-20") #{landingpage.email[2]}
+	.hidden
+		| Years of age:
+		span#yearsOfAge
+		|
+		| |
+		| Years of developing:
+		span#yearsOfDeveloping

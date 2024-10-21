@@ -5,42 +5,12 @@ include Container
 section#academia.bg-nls-black.text-white
 	.p-8(class="sm:p-20 min-h-[120vh]")
 		+Container
-			// region Computer Science
-			+Title("h2")= academia.sectionTitles.computerScience
-			.mb-12
-				.mb-8.max-w-prose.prose(class="lg:prose-xl")
-					each paragraph, i in academia.intro
-						- const additionalClasses = i !== 0 ? "indent-3" : "mb-2 font-serif leading-tight sm:text-xl text-lg";
-						p(class=additionalClasses)= paragraph
-			// endregion
-
-			// region Courses
-			.grid.grid-cols-1.gap-6.mb-8(class="md:grid-cols-1")
-				div
-					details.mb-4
-						summary.rounded-sm.text-white.transition.underline-offset-2.mb-2.cursor-pointer(
-							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline",
-							onclick="umami.track('collapsable clicked', { category: 'courses dhbw', visitDuration: getVisitDuration() })"
-						)= academia.courseInstitutions.dhbw
-						ul.list-disc.list-inside
-							li= academia.courses.dhbw[0]
-				div
-					details.mb-4
-						summary.rounded-sm.text-white.transition.underline-offset-2.mb-2.cursor-pointer(
-							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline",
-							onclick="umami.track('collapsable clicked', { category: 'courses leibniz-fh', visitDuration: getVisitDuration() })"
-						)= academia.courseInstitutions.lfh
-						ul.list-disc.list-inside
-							each course in academia.courses.lfh
-								li= course
-			// endregion
-
 			// region Skills
 			+Title("h2")= academia.sectionTitles.expertise
-			.mb-8.max-w-prose.prose(class="lg:prose-xl")
+			.mb-8.max-w-prose
 				each paragraph, i in academia.expertise.intro
-					- const additionalClasses = i !== 0 ? "indent-3" : "mb-2 font-serif leading-tight sm:text-xl text-md";
-					p(class=additionalClasses)= paragraph
+					- const additionalClasses = i !== 0 ? "indent-3" : "mb-2 font-serif leading-widest sm:text-md text-sm tracking-tight w-5/6 text-white";
+					p.text-slate-200(class=`hover:text-white transition ${additionalClasses}`) !{paragraph}
 			// endregion
 
 			// region Expertise
@@ -52,4 +22,36 @@ section#academia.bg-nls-black.text-white
 				+Collapsable(academia.expertise.crossPlatform)
 				+Collapsable(academia.expertise.bestPractices)
 				+Collapsable(academia.expertise.tracking)
+			// endregion
+
+		+Container
+			// region Computer Science
+			+Title("h2")= academia.sectionTitles.computerScience
+			.mb-12
+				.mb-8.max-w-prose.prose(class="lg:prose-xl")
+					each paragraph, i in academia.intro
+						- const additionalClasses = i !== 0 ? "indent-3" : "mb-2 font-serif leading-widest sm:text-md text-sm tracking-tight w-5/6 text-white";
+						p.text-slate-200(class=`hover:text-white transition ${additionalClasses}`) !{paragraph}
+			// endregion
+
+			// region Courses
+			.grid.grid-cols-1.gap-6.mb-8(class="md:grid-cols-1")
+				div
+					details.mb-4
+						summary.rounded-sm.text-white.transition.underline-offset-2.mb-2.cursor-pointer(
+							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline",
+							onclick="umami.track('collapsable clicked', { category: 'courses dhbw', visitDuration: getVisitDuration() })"
+						)= academia.courseInstitutions.dhbw
+						ul.list-disc.list-inside
+							each course in academia.courses.dhbw
+								li= course
+				div
+					details.mb-4
+						summary.rounded-sm.text-white.transition.underline-offset-2.mb-2.cursor-pointer(
+							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline",
+							onclick="umami.track('collapsable clicked', { category: 'courses leibniz-fh', visitDuration: getVisitDuration() })"
+						)= academia.courseInstitutions.lfh
+						ul.list-disc.list-inside
+							each course in academia.courses.lfh
+								li= course
 			// endregion

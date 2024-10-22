@@ -53,38 +53,6 @@
 		},
 		"professional": {
 			"title": "Professional Approach",
-			"keyConcepts": [
-				{
-					"link": {
-						"href": "https://12factor.net/",
-						"title": "The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc).",
-						"ariaLabel": "The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc).",
-						"text": "The 12-Factor App"
-					},
-					"text": " Microservices and Software-as-a-Service Methodology"
-				},
-				{
-					"text": "Testing Pyramid"
-				},
-				{
-					"text": "Accessibility (a11y)"
-				},
-				{
-					"text": "Rapid Prototyping and Design Thinking"
-				},
-				{
-					"text": "Scalability and Reliability"
-				},
-				{
-					"text": "Continuous Integration and Continuous Deployment (CI/CD)"
-				},
-				{
-					"text": "DevOps and Site Reliability Engineering (SRE)"
-				},
-				{
-					"text": "Agile and Lean Development"
-				}
-			],
 			"principlesIntro": "Throughout my career, I've been guided by the philosophies and innovations of industry pioneers. These principles form the foundation of my approach to software architecture and digital transformation:",
 			"principlesPeople": [
 				{
@@ -1122,7 +1090,26 @@
 									"label": "Web"
 								}
 							]
-						}
+						},
+						{
+							"links": [
+								{
+									"url": "https://12factor.net/",
+									"title": "The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc).",
+									"ariaLabel": "The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc).",
+									"text": "The 12-Factor App (Microservices and Software-as-a-Service Methodology)"
+								}
+							]
+						},
+						{"text": "Testing Pyramid"},
+						{"text": "Accessibility (a11y)"},
+						{"text": "Rapid Prototyping and Design Thinking"},
+						{"text": "Scalability and Reliability"},
+						{
+							"text": "Continuous Integration and Continuous Deployment (CI/CD)"
+						},
+						{"text": "DevOps and Site Reliability Engineering (SRE)"},
+						{"text": "Agile and Lean Development"}
 					]
 				},
 				"tracking": {
@@ -1169,6 +1156,36 @@
 									"label": "Hotjar"
 								}
 							]
+						},
+						{
+							"link": {
+								"href": "https://12factor.net/",
+								"title": "The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc).",
+								"ariaLabel": "The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc).",
+								"text": "The 12-Factor App"
+							},
+							"text": " Microservices and Software-as-a-Service Methodology"
+						},
+						{
+							"text": "Testing Pyramid"
+						},
+						{
+							"text": "Accessibility (a11y)"
+						},
+						{
+							"text": "Rapid Prototyping and Design Thinking"
+						},
+						{
+							"text": "Scalability and Reliability"
+						},
+						{
+							"text": "Continuous Integration and Continuous Deployment (CI/CD)"
+						},
+						{
+							"text": "DevOps and Site Reliability Engineering (SRE)"
+						},
+						{
+							"text": "Agile and Lean Development"
 						}
 					]
 				}

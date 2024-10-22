@@ -6,24 +6,24 @@ section#professional.bg-nls-black.text-white
 	.p-8(class="sm:p-20 min-h-[120vh]")
 		+Container
 			+Title("h2")= professional.title
-			p.mb-8.max-w-prose.prose.indent-3(class="lg:prose-xl")
+			p.mb-4.max-w-prose.prose.indent-3(class="lg:prose-xl")
 				| #{professional.description}
-			ul.list-disc.list-inside.mb-8
-				each item, i in professional.keyConcepts
-					li
-						if item.link
-							a.rounded-sm.transition.underline-offset-2.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer.text-white.underline(
-								href=item.link.href,
-								class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline",
-								title=item.link.title,
-								target="_blank",
-								rel="noopener noreferrer",
-								onclick=`umami.track('external link clicked', { position: 'professional', label: '${item.link.label}', visitDuration: getVisitDuration() })`,
-								aria-label=item.link.ariaLabel
-							) #{item.link.text}
-						| #{item.text}
-				p.mb-8.mt-12.max-w-prose.prose(class="lg:prose-xl")
-					| #{professional.principlesIntro}
+			//ul.list-disc.list-inside.mb-8
+			//	each item, i in professional.keyConcepts
+			//		li
+			//			if item.link
+			//				a.rounded-sm.transition.underline-offset-2.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer.text-white.underline(
+			//					href=item.link.href,
+			//					class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline",
+			//					title=item.link.title,
+			//					target="_blank",
+			//					rel="noopener noreferrer",
+			//					onclick=`umami.track('external link clicked', { position: 'professional', label: '${item.link.label}', visitDuration: getVisitDuration() })`,
+			//					aria-label=item.link.ariaLabel
+			//				) #{item.link.text}
+			//			| #{item.text}
+			p.mb-8.max-w-prose.prose(class="lg:prose-xl")
+				| #{professional.principlesIntro}
 			.list-disc.list-inside.mb-8
 				each person, i in professional.principlesPeople
 					- const data = {summary: `${person.name} — ${person.concept}`, color: "white", category: "professional"};

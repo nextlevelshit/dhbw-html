@@ -1,11 +1,3 @@
-//-
-	Collapsable Component
-	@param {Object} data - The data object containing the collapsable content
-	@param {Boolean} isOpen - The initial state of the collapsable content
-	@param {String} data.color - The color of the collapsable content
-	@param {String} data.category - The category of the collapsable content
-	@param {String} data.summary - The summary of the collapsable content
-	@param {Array} data.items - The items of the collapsable content
 mixin Collapsable(data, open)
 	- const isExpanded = open || false;
 	- const color = data.color || "orange";

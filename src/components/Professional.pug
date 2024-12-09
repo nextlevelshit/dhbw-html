@@ -1,18 +1,14 @@
-include Collapsable
-include Title
-include Container
-
-section#professional.bg-nls-black.text-white
+section#professional.bg-white.text-nls-black(class="dark:bg-nls-black dark:text-white")
 	.p-8(class="sm:p-20 min-h-[120vh]")
 		+Container
 			+Title("h2")= professional.title
-			p.mb-4.max-w-prose.prose.indent-3(class="lg:prose-xl")
+			p.mb-4.max-w-prose.prose.indent-3(class="lg:prose-xl dark:prose-invert")
 				| #{professional.description}
-			p.mb-8.max-w-prose.prose(class="lg:prose-xl")
+			p.mb-8.max-w-prose.prose(class="lg:prose-xl dark:prose-invert")
 				| #{professional.principlesIntro}
 			.list-disc.list-inside.mb-8
 				each person, i in professional.principlesPeople
-					- const data = {summary: `${person.name} — ${person.concept}`, color: "white", category: "professional"};
+					- const data = {summary: `${person.name} — ${person.concept}`, color: "text-nls-black dark:text-white", category: "professional"};
 					- const isOpen = i === 0;
 					+Collapsable(data, isOpen)
 						each paragraph, j in person.paragraphs

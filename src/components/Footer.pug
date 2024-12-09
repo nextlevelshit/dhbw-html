@@ -5,15 +5,15 @@ mixin Link(href, label, target, rel)
 	- const eventCategory = "footer";
 	- const onclick = `umami.track('${eventName}', { category: 'icons', position: 'footer', label: '${label}', visitDuration: getVisitDuration() })`;
 
-	a.transition-colors.text-white(href=href, class="hover:text-amber-300", target=target, rel=rel, onclick=onclick)
+	a.transition-colors.text-nls-black(href=href, class="dark:text-white hover:text-amber-300", target=target, rel=rel, onclick=onclick)
 		block
 
 mixin Svg
 	svg.w-24.h-24(class="sm:w-8 sm:h-8", aria-hidden="true", fill="currentColor", viewbox="0 0 24 24")
 		block
 
-footer#footer.bg-nls-black.text-white
-	.p-8(class="sm:p-20 min-h-[120vh]")
+footer#footer
+	.p-8.bg-white.text-nls-black(class="dark:bg-nls-black dark:text-white sm:p-20 min-h-[120vh]")
 		+Container
 			// region Contact
 			h2.text-5xl.mb-4 #{footer.title}
@@ -44,14 +44,14 @@ footer#footer.bg-nls-black.text-white
 								style="fill: currentColor"
 							)
 
-					a.transition-colors.text-white.uppercase.font-semibold(
+					a.transition-colors.text-nls-black.uppercase.font-semibold(
 						href=footer.emailLink,
-						class="hover:text-amber-300",
+						class="dark:text-white hover:text-amber-300",
 						rel="noopener noreferrer",
 						onclick="umami.track('email clicked', { position: 'footer', visitDuration: getVisitDuration() })"
 					) #{footer.emailText}
 
-					+Link("./src/assets/CV_2019_Michael-Werner-Czechowski_en.pdf", "CV", "_blank", "noopener noreferrer")
+					+Link("./src/assets/CV_2024_Michael-Werner-Czechowski_de.pdf", "CV", "_blank", "noopener noreferrer")
 						| CV
 
 					+Link("https://git.dailysh.it/nextlevelshit/dailysh.it", "gitea", "_blank", "noopener noreferrer")= footer.gitea

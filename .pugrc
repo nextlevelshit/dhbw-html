@@ -45,6 +45,7 @@
 			"email": ["hello", "at", "dailysh.it"],
 			"name": "Michael W. Czechowski",
 			"logoSvg": "./src/assets/nls.svg",
+			"logoSvgInverted": "./src/assets/nls_inverted.svg",
 			"emojiSvg": "./src/assets/waving-hand.svg",
 			"jobTitle": ["Enterprise Software Architect", "Digital Transformation Expert"]
 		},
@@ -129,7 +130,7 @@
 			],
 			"sectionTitles": {
 				"computerScience": "Computer Science",
-				"expertise": "Software Architecture and Development"
+				"expertise": "Software <wbr/>Architect&shy;ure <wbr/>and <wbr/>Develop&shy;ment"
 			},
 			"courseInstitutions": {
 				"dhbw": "Duale Hochschule Baden-Württemberg (DHBW)",
@@ -1164,7 +1165,7 @@
 								"ariaLabel": "The twelve-factor methodology can be applied to apps written in any programming language, and which use any combination of backing services (database, queue, memory cache, etc).",
 								"text": "The 12-Factor App"
 							},
-							"text": " Microservices and Software-as-a-Service Methodology"
+							"text": "Microservices and Software-as-a-Service Methodology"
 						},
 						{
 							"text": "Testing Pyramid"

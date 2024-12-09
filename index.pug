@@ -32,12 +32,15 @@ html.scroll-smooth(lang=lang)
 				});
 			sections.forEach((section) => sectionObserver(section.id).observe(section));
 
-			let yearsOfAge = 0;
-			let yearsOfDeveloping = 0;
+			// tailwindcss set correct dark/light theme depending on client preference
+			// https://tailwindcss.com/docs/dark-mode#toggling-dark-mode
 
-			setInterval(() => {
-				yearsOfAge = (new Date().getTime() - new Date("1988-10-07").getTime()) / 1000 / 60 / 60 / 24 / 365.25;
-				yearsOfDeveloping = (new Date().getTime() - new Date("2005-07-07").getTime()) / 1000 / 60 / 60 / 24 / 365.25;
-				document.getElementById("yearsOfAge").innerText = yearsOfAge.toFixed(6);
-				document.getElementById("yearsOfDeveloping").innerText = yearsOfDeveloping.toFixed(6);
-			}, 500);
+			// let yearsOfAge = 0;
+			// let yearsOfDeveloping = 0;
+			//
+			// setInterval(() => {
+			// 	yearsOfAge = (new Date().getTime() - new Date("1988-10-07").getTime()) / 1000 / 60 / 60 / 24 / 365.25;
+			// 	yearsOfDeveloping = (new Date().getTime() - new Date("2005-07-07").getTime()) / 1000 / 60 / 60 / 24 / 365.25;
+			// 	document.getElementById("yearsOfAge").innerText = yearsOfAge.toFixed(6);
+			// 	document.getElementById("yearsOfDeveloping").innerText = yearsOfDeveloping.toFixed(6);
+			// }, 500);

@@ -6,11 +6,11 @@ mixin Collapsable(data, open)
 
 	div
 		details.mb-4(open=isExpanded)
-			summary.rounded-sm.transition.mb-2.cursor-pointer.text-md.font-semibold.mb-2.cursor-pointer(
-				class=`sm:text-lg text-nls-${color} focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-${color} focus:bg-nls-${color} focus:text-black focus:no-underline`,
+			summary(
+				class=`rounded-sm transition mb-2 cursor-pointer text-md font-semibold mb-2 cursor-pointer sm:text-lg text-nls-${color} dark:text-nls-${color} focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-${color} focus:bg-nls-${color} focus:text-black focus:no-underline`,
 				onclick=`umami.track('collapsable clicked', { category: '${category}', visitDuration: getVisitDuration() })`
 			)= data.summary
-			ul.list-disc.list-inside.text-stone-300
+			ul.list-disc.list-inside.text-slate-600(class="dark:text-stone-300")
 				if data.items
 					each item in data.items
 						li
@@ -18,15 +18,15 @@ mixin Collapsable(data, open)
 								= item.text
 							if item.links
 								each link, index in item.links
-									a.transition.underline-offset-2.underline(
-										class=`text-nls-${color} hover:text-white hover:decoration-2`,
+									a(
+										class=`transition underline-offset-2 underline text-nls-${color} hover:text-nls-black dark:hover:text-white hover:decoration-2`,
 										href=link.url,
 										title=link.description,
 										target="_blank",
 										aria-label=link.description,
 										rel="noopener noreferrer",
 										onclick=`umami.track('${linkEventName}', { category: '${category}', position: 'collapsable', label: '${link.label}', visitDuration: getVisitDuration() })`
-									)= link.text
+									) #{link.text}
 									if index < item.links.length - 1
 										| ,&nbsp;
 							if item.suffix

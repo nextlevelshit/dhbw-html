@@ -2,15 +2,15 @@ include Collapsable
 include Title
 include Container
 
-section#academia.bg-nls-black.text-white
-	.p-8(class="sm:p-20 min-h-[120vh]")
+section#academia
+	.p-8.bg-white.text-nls-black(class="dark:bg-nls-black dark:text-white sm:p-20 min-h-[120vh]")
 		+Container
 			// region Skills
-			+Title("h2")= academia.sectionTitles.expertise
+			+Title("h2") !{academia.sectionTitles.expertise}
 			.mb-8.max-w-prose
 				each paragraph, i in academia.expertise.intro
-					- const additionalClasses = i !== 0 ? "indent-3" : "mb-2 font-serif leading-widest sm:text-md text-sm tracking-tight w-5/6 text-white";
-					p.text-slate-200(class=`hover:text-white transition ${additionalClasses}`) !{paragraph}
+					- const additionalClasses = i !== 0 ? "indent-3" : "mb-2 font-serif leading-widest sm:text-md text-sm tracking-tight w-5/6";
+					p(class=`text-slate-700 dark:text-slate-300 ${additionalClasses}`) !{paragraph}
 			// endregion
 
 			// region Expertise
@@ -31,15 +31,15 @@ section#academia.bg-nls-black.text-white
 				.mb-8.max-w-prose.prose(class="lg:prose-xl")
 					each paragraph, i in academia.intro
 						- const additionalClasses = i !== 0 ? "indent-3" : "mb-2 font-serif leading-widest sm:text-md text-sm tracking-tight w-5/6 text-white";
-						p.text-slate-200(class=`hover:text-white transition ${additionalClasses}`) !{paragraph}
+						p.text-slate-700(class=`dark:text-slate-300 ${additionalClasses}`) !{paragraph}
 			// endregion
 
 			// region Courses
 			.grid.grid-cols-1.gap-6.mb-8(class="md:grid-cols-1")
 				div
 					details.mb-4
-						summary.rounded-sm.text-white.transition.underline-offset-2.mb-2.cursor-pointer(
-							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline",
+						summary.rounded-sm.text-nls-black.transition.underline-offset-2.mb-2.cursor-pointer(
+							class="dark:text-white focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-black dark:focus:ring-white focus:bg-nls-black focus:text-white dark:focus:bg-white dark:focus:text-nls-black focus:no-underline",
 							onclick="umami.track('collapsable clicked', { category: 'courses dhbw', visitDuration: getVisitDuration() })"
 						)= academia.courseInstitutions.dhbw
 						ul.list-disc.list-inside
@@ -47,8 +47,8 @@ section#academia.bg-nls-black.text-white
 								li= course
 				div
 					details.mb-4
-						summary.rounded-sm.text-white.transition.underline-offset-2.mb-2.cursor-pointer(
-							class="focus:outline-none focus:z-10 focus:ring-4 focus:ring-white focus:bg-white focus:text-black focus:no-underline",
+						summary.rounded-sm.text-md.text-nls-black.transition.underline-offset-2.mb-2.cursor-pointer(
+							class="sm:text-lg dark:text-white focus:outline-none focus:z-10 focus:ring-4 focus:ring-nls-black dark:focus:ring-white focus:bg-nls-black focus:text-white dark:focus:bg-white dark:focus:text-nls-black focus:no-underline",
 							onclick="umami.track('collapsable clicked', { category: 'courses leibniz-fh', visitDuration: getVisitDuration() })"
 						)= academia.courseInstitutions.lfh
 						ul.list-disc.list-inside

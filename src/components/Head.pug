@@ -51,6 +51,7 @@ head
 	script(src="https://cdn.tailwindcss.com")
 	script.
 		tailwind.config = {
+			darkMode: "media",
 			theme: {
 				fontFamily: {
 					mono: ["Roboto Mono", "monospace"],
@@ -146,3 +147,26 @@ head
 		const getVisitDuration = () => {
 			return Math.floor((Date.now() - window.visitDuration) / 1000);
 		};
+
+		// Check for saved user preference, if any, on load of the website
+		const darkMode = localStorage.getItem("darkMode");
+
+		// If no preference is set, check system preference
+		if (darkMode === null) {
+			if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+				document.documentElement.classList.add("dark");
+				localStorage.setItem("darkMode", "dark");
+			}
+		} else if (darkMode === "dark") {
+			document.documentElement.classList.add("dark");
+		}
+
+		function toggleDarkMode() {
+			if (document.documentElement.classList.contains("dark")) {
+				document.documentElement.classList.remove("dark");
+				localStorage.setItem("darkMode", "light");
+			} else {
+				document.documentElement.classList.add("dark");
+				localStorage.setItem("darkMode", "dark");
+			}
+		}

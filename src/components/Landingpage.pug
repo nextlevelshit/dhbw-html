@@ -1,14 +1,4 @@
 header.bg-white.text-nls-black(class="dark:text-white dark:bg-nls-black")
-	//button.absolute.top-0.right-0.w-8.h-8.m-3.p-3.rounded-full.bg-slate-300(
-	//	onclick="toggleDarkMode()"
-	//)
-	//	div(class="block dark:hidden")
-	//		span.sr-only Toggle dark mode
-	//		| 🌙
-	//	div(class="hidden dark:block")
-	//		span.sr-only Toggle light mode
-	//		| ☀️
-
 	.teaser.p-8.flex.flex-col.items-center.justify-center(class="sm:p-20")
 		.max-w-3xl.mb-8.relative(class="w-4/5 min-h-[90vh]")
 			.peer.absolute.bottom-0.left-0.right-0.z-40.text-center.max-w-3xl.center.py-8
@@ -20,11 +10,6 @@ header.bg-white.text-nls-black(class="dark:text-white dark:bg-nls-black")
 					wbr
 					|
 					| &amp; #{landingpage.jobTitle[1]}
-
-			//img.absolute.z-10.left-0.right-0.mx-auto.opacity-0.transition(
-			//	class="top-[30vh] max-h-[37vh] peer-hover:opacity-100 peer-hover:scale-150",
-			//	src=landingpage.emojiSvg
-			//)
 
 			img.absolute.z-0.left-0.right-0.mx-auto.transition.invisible(class="dark:visible h-[54vh]", src=landingpage.logoSvg)
 
